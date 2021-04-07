@@ -1,4 +1,4 @@
-package java;
+package com.fuchuang.pojo;
 
 import java.util.HashMap;
 //import java.util.List;

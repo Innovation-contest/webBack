@@ -10,14 +10,14 @@ public class Order {
     private Map<Integer,Integer> products;
     private Map<Integer,Integer> processes;
 
-    Order(int priority,int end_time,int[]products,int[]processes){
-        this.priority = priority;
-        this.end_time = end_time;
-        this.products = new HashMap<>();
-        for(int p : products){
-            if (this.products.get(p) == null){
-                this.products.put(p,this.products.getOrDefault(p, -1)+1);
-            }
-        }
-    }
+    // Order(int priority,int end_time,int[]products,int[]processes){
+    //     this.priority = priority;
+    //     this.end_time = end_time;
+    //     this.products = new HashMap<>();
+    //     for(int p : products){
+    //         if (this.products.get(p) == null){
+    //             this.products.put(p,this.products.getOrDefault(p, -1)+1);
+    //         }
+    //     }
+    // }
 }

@@ -10,6 +10,38 @@ public class Order {
     private Map<Integer,Integer> products;
     private Map<Integer,Integer> processes;
 
+    public int getEnd_time() {
+        return end_time;
+    }
+
+    public void setEnd_time(int end_time) {
+        this.end_time = end_time;
+    }
+
+    public Map<Integer, Integer> getProducts() {
+        return products;
+    }
+
+    public void setProducts(Map<Integer, Integer> products) {
+        this.products = products;
+    }
+
+    public Map<Integer, Integer> getProcesses() {
+        return processes;
+    }
+
+    public void setProcesses(Map<Integer, Integer> processes) {
+        this.processes = processes;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
     // Order(int priority,int end_time,int[]products,int[]processes){
     //     this.priority = priority;
     //     this.end_time = end_time;

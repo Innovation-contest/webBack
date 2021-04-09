@@ -20,7 +20,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     public List<Process> schedule(List<Order> orders) {
         List<Process> processes = new ArrayList<>();
         Process proc = new Process();
-        return processes;
+        return null;
     }
     //单个订单进行排产
     private Process order_schedule(Order order){

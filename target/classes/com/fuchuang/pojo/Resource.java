@@ -7,7 +7,7 @@ public class Resource {
     private String type;
     private String workspace;
     private int end_time;
-    private List<Object> processes;
+    private List<Process> processes;
 
     public int getId() {
         return id;
@@ -41,11 +41,11 @@ public class Resource {
         this.end_time = end_time;
     }
 
-    public List<Object> getProcesses() {
+    public List<Process> getProcesses() {
         return processes;
     }
 
-    public void setProcesses(List<Object> processes) {
+    public void setProcesses(List<Process> processes) {
         this.processes = processes;
     }
 

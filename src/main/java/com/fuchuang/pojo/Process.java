@@ -7,7 +7,7 @@ public class Process {
     private Boolean parallel;
     private String workspace;
     private int max_num;
-    private List<Object> resource;
+    private List<Resource> resource;
     private int start_time;
     private int exec_time;
     private int end_time;
@@ -44,11 +44,11 @@ public class Process {
         this.max_num = max_num;
     }
 
-    public List<Object> getResource() {
+    public List<Resource> getResource() {
         return resource;
     }
 
-    public void setResource(List<Object> resource) {
+    public void setResource(List<Resource> resource) {
         this.resource = resource;
     }
 

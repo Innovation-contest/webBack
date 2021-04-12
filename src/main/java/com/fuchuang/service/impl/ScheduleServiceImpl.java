@@ -1,19 +1,24 @@
 package com.fuchuang.service.impl;
 
+import com.fuchuang.mapper.ProductMapper;
 import com.fuchuang.pojo.Order;
 import com.fuchuang.pojo.Resource;
 import com.fuchuang.pojo.Process;
 import com.fuchuang.pojo.SemiProduct;
 import com.fuchuang.service.ScheduleService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+@Service
 public class ScheduleServiceImpl implements ScheduleService {
 
+    @Autowired
+    private ProductMapper productMapper;
     /**
      *
      * @param orders 拆分好的订单列表

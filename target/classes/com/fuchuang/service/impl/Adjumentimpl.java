@@ -5,7 +5,7 @@ import com.fuchuang.service.Adjustment;
 
 import java.util.List;
 
-public class Adjumentimpl implements Adjustment {
+public class AdjumentImpl implements Adjustment {
     /**
      *
      * @param resources 调整排产的资源列表

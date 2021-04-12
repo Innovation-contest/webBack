@@ -4,7 +4,7 @@ import com.fuchuang.pojo.Order;
 
 import java.util.List;
 
-public class InsertOrder implements com.fuchuang.service.InsertOrder {
+public class InsertOrderImpl implements com.fuchuang.service.InsertOrder {
     /**
      *
      * @param order 插入的拆分好的订单

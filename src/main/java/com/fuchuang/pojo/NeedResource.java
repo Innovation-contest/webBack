@@ -1,5 +1,10 @@
 package com.fuchuang.pojo;
 
-public class NeedResource {
+import lombok.Data;
 
+@Data
+public class NeedResource {
+    private int resource_num;
+    private String resource_type;
+    private int process_id;
 }

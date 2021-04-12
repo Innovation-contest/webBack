@@ -3,9 +3,8 @@ package com.fuchuang.service.impl;
 import com.fuchuang.pojo.Order;
 import com.fuchuang.pojo.Resource;
 import com.fuchuang.pojo.Process;
-import com.fuchuang.pojo.Product_semi;
+import com.fuchuang.pojo.SemiProduct;
 import com.fuchuang.service.ScheduleService;
-import com.fuchuang.service.SplitOrder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,7 +43,7 @@ public class ScheduleServiceImpl implements ScheduleService {
         }
 
         //将半成品集合对应为实例集合
-        List<Product_semi> semis_todo = new ArrayList<>();
+        List<SemiProduct> semis_todo = new ArrayList<>();
         
         for(int key:product_semis.keySet()){
             //...调用半成品以获得半成品的产品实例
@@ -57,7 +56,7 @@ public class ScheduleServiceImpl implements ScheduleService {
             
             for(int i=semis_todo.size()-1;i>=0;i--){
                 //得到当前半成品首要工序
-                Process proc = semis_todo.get(i).getProcess(semis_todo.get(i).getSeq());
+                Process proc = semis_todo.get(i).getProcesses().get(semis_todo.get(i).getSeq());
                 //加入首要工序列表
                 processes.put(proc,processes.getOrDefault(proc, -1)+1);
                 //判断是否为最后一道工序

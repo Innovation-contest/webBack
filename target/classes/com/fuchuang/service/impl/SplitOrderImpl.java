@@ -1,7 +1,7 @@
 package com.fuchuang.service.impl;
 
 import com.fuchuang.pojo.Order;
-import com.fuchuang.pojo.Product_semi;
+import com.fuchuang.pojo.SemiProduct;
 import com.fuchuang.service.SplitOrder;
 
 import java.util.ArrayList;
@@ -15,14 +15,14 @@ public class SplitOrderImpl implements SplitOrder {
      * @return 工序list
      */
     @Override
-    public List<Product_semi> split(Order order){
+    public List<SemiProduct> split(Order order){
         Map<Integer,Integer> products = order.getProducts();
-        List<Product_semi> product_semis = new ArrayList<>();
+        List<SemiProduct> product_semis = new ArrayList<>();
         
         for(int i = 1;i <= 6;i ++){
             int n = products.getOrDefault(i,-1);
             if(n != -1){
-                List<Product_semi> temp = null;
+                List<SemiProduct> temp = null;
                 //调用product接口得到product-semis
                 product_semis.addAll(temp);
             }

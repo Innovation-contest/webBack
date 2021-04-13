@@ -5,10 +5,10 @@
 
 <mapper namespace="com.fuchuang.mapper.ProductMapper">
     <resultMap id="productResultMap" type="com.fuchuang.pojo.Product">
-        <id property="id" column="product_id"/>
+        <id property="product_id" column="product_id"/>
         <collection property="semiProducts" javaType="ArrayList" column="product_id" ofType="com.fuchuang.pojo.SemiProduct"
                     select="com.fuchuang.mapper.SemiProductMapper.selectSemiByProductId" fetchType="lazy">
-            <id property="id" column="semi_id"/>
+<!--            <id property="id" column="semi_id"/>-->
 <!--            <collection property="processes" column="semi_id" javaType="ArrayList" ofType="com.fuchuang.pojo.Process"-->
 <!--                        select="com.fuchuang.mapper.ProcessMapper.selectProcessBySemiId">-->
 <!--            </collection>-->

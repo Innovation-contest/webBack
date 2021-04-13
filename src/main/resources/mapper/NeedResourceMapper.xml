@@ -3,5 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fuchuang.mapper.NeedResouceMapper">
-
+    <select id="selectResourceByProcessId" parameterType="int" resultType="com.fuchuang.pojo.NeedResource">
+        select
+        resource_type as "resouce_type",
+        resouce_num as "resouce_num",
+        process_id as "process_id"
+        from need_resouce where process_id=#{process_id}
+    </select>
 </mapper>

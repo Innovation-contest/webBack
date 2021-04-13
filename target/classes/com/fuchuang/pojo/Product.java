@@ -6,6 +6,6 @@ import java.util.List;
 
 @Data
 public class Product {
-    private int id;
+    private int product_id;
     private List<SemiProduct> semiProducts;
 }

@@ -47,13 +47,13 @@ public class OrderMapperTest {
 
     @Test
     public void test_productsplit(){
-        Product product = productMapper.selectProductById(1);
+        Product product = productMapper.selectProductById(3);
         System.out.println(product.toString());
     }
 
     @Test
     public void test_semiprocess(){
-        List<SemiProduct> semiProducts=semiProductMapper.selectSemiByProductId(1);
+        List<SemiProduct> semiProducts=semiProductMapper.selectSemiByProductId(3);
         for(SemiProduct semiProduct:semiProducts){
             System.out.println(semiProduct);
         }
@@ -61,7 +61,7 @@ public class OrderMapperTest {
 
     @Test
     public void test_process(){
-        List<Process> processes =processMapper.selectProcessBySemiId(1);
+        List<Process> processes =processMapper.selectProcessBySemiId(2);
         for(Process process:processes){
             System.out.println(process.toString());
         }

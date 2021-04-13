@@ -5,19 +5,23 @@
 <mapper namespace="com.fuchuang.mapper.ProcessMapper">
     <resultMap id="processResultMap" type="com.fuchuang.pojo.Process">
         <id property="id" column="process_id"/>
+        <result property="semi_id" column="semi_id"/>
         <result property="parallel" column="is_para"/>
         <result property="max_num" column="max_para"/>
         <result property="exec_time" column="oper_time"/>
         <result property="workspace" column="pro_workspace"/>
+        <collection property="needResources" column="process_id" javaType="java.util.List"
+                    select="com.fuchuang.mapper.NeedResouceMapper.selectResourceByProcessId"/>
     </resultMap>
 
-    <select id="selectProcessBySemiId" parameterType="int" resultType="com.fuchuang.pojo.Process">
+    <select id="selectProcessBySemiId" parameterType="int" resultMap="processResultMap">
         select
-        process_id as id,
-        is_para as "parallel",
-        max_para as "max_num",
-        oper_time as "exec_time",
-        pro_workspace as workspace
+        process_id,
+        semi_id,
+        is_para,
+        max_para,
+        oper_time,
+        pro_workspace
         from processes where semi_id=#{semi_id}
     </select>
 

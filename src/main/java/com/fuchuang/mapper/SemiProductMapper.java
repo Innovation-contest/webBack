@@ -2,6 +2,8 @@ package com.fuchuang.mapper;
 
 import com.fuchuang.pojo.SemiProduct;
 
+import java.util.List;
+
 public interface SemiProductMapper {
-    SemiProduct selectSemiByProductId(int product_id);
+    List<SemiProduct> selectSemiByProductId(int product_id);
 }

@@ -17,5 +17,10 @@
         select *
         from ordeinfo
     </select>
+
+    <select id="selectOrderById" resultMap="orderResult">
+        select *
+        from ordeinfo where order_id=#{order_id}
+    </select>
 </mapper>
 

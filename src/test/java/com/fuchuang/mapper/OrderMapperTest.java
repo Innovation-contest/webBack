@@ -1,8 +1,7 @@
 package com.fuchuang.mapper;
 
-import com.fuchuang.pojo.Order;
-import com.fuchuang.pojo.Product;
-import com.fuchuang.pojo.RealProduct;
+import com.fuchuang.pojo.*;
+import com.fuchuang.pojo.Process;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,12 +22,19 @@ public class OrderMapperTest {
     @Autowired
     private  ProductMapper productMapper;
 
+    @Autowired
+    private ProcessMapper processMapper;
+
+    @Autowired
+    private SemiProductMapper semiProductMapper;
+
     @Test
     public void allOrder(){
         List<Order> orders=orderMapper.selectAllOrder();
-        for(Order order:orders){
-            System.out.println(order.toString());
-        }
+        Order order1 = orderMapper.selectOrderById(1);
+//        for(Order order:orders){
+            System.out.println(order1.toString());
+//        }
     }
 
     @Test
@@ -40,8 +46,24 @@ public class OrderMapperTest {
     }
 
     @Test
-    public void test_prosemi(){
+    public void test_productsplit(){
         Product product = productMapper.selectProductById(1);
         System.out.println(product.toString());
+    }
+
+    @Test
+    public void test_semiprocess(){
+        List<SemiProduct> semiProducts=semiProductMapper.selectSemiByProductId(1);
+        for(SemiProduct semiProduct:semiProducts){
+            System.out.println(semiProduct);
+        }
+    }
+
+    @Test
+    public void test_process(){
+        List<Process> processes =processMapper.selectProcessBySemiId(1);
+        for(Process process:processes){
+            System.out.println(process.toString());
+        }
     }
 }

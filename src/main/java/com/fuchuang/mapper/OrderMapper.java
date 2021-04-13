@@ -9,8 +9,8 @@ import java.util.List;
 public interface OrderMapper {
     List<Order> selectAllOrder();
 
+    Order selectOrderById(int order_id);
     Boolean insertOneOrder();
-
 
 
 }

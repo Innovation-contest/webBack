@@ -11,8 +11,14 @@
         <result property="workspace" column="pro_workspace"/>
     </resultMap>
 
-    <select id="selectProcessBySemiId" parameterType="int" resultMap="processResultMap">
-        select * from processes where semi_id=#{semi_id}
+    <select id="selectProcessBySemiId" parameterType="int" resultType="com.fuchuang.pojo.Process">
+        select
+        process_id as id,
+        is_para as "parallel",
+        max_para as "max_num",
+        oper_time as "exec_time",
+        pro_workspace as workspace
+        from processes where semi_id=#{semi_id}
     </select>
 
 

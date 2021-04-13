@@ -3,14 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fuchuang.mapper.SemiProductMapper">
-    <resultMap id="semiResultMap" type="SemiProduct">
-        <id property="id" column="semi_id"/>
-        <collection property="processes" column="semi_id" javaType="java.util.List" select="com.fuchuang.mapper.ProcessMapper.selectProcessBySemiId"
-                    ofType="com.fuchuang.pojo.Process">
-        </collection>
-    </resultMap>
+<!--    <resultMap id="semiResultMap" type="com.fuchuang.pojo.SemiProduct">-->
+<!--        <id property="id" column="semi_id"/>-->
+<!--        <collection property="processes" column="semi_id" javaType="ArrayList" select="com.fuchuang.mapper.ProcessMapper.selectProcessBySemiId"-->
+<!--                    ofType="com.fuchuang.pojo.Process">-->
+<!--        </collection>-->
+<!--    </resultMap>-->
 
-    <select id="selectSemiByProductId" parameterType="int" resultMap="semiResultMap">
+    <select id="selectSemiByProductId" parameterType="int" resultType="com.fuchuang.pojo.SemiProduct">
         select
         semi_id as id
         from semi_product where semi_id in (select semi_id from product_semi where product_id= #{product_id})

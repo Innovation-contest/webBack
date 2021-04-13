@@ -3,6 +3,7 @@ package com.fuchuang.service.impl;
 import com.fuchuang.pojo.Order;
 import com.fuchuang.pojo.SemiProduct;
 import com.fuchuang.service.SplitOrder;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;

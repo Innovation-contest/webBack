@@ -9,6 +9,9 @@
         <collection property="semiProducts" javaType="ArrayList" column="product_id" ofType="com.fuchuang.pojo.SemiProduct"
                     select="com.fuchuang.mapper.SemiProductMapper.selectSemiByProductId" fetchType="lazy">
             <id property="id" column="semi_id"/>
+<!--            <collection property="processes" column="semi_id" javaType="ArrayList" ofType="com.fuchuang.pojo.Process"-->
+<!--                        select="com.fuchuang.mapper.ProcessMapper.selectProcessBySemiId">-->
+<!--            </collection>-->
         </collection>
     </resultMap>
 
@@ -16,7 +19,6 @@
         select * from product_fixed pf
              where pf.product_id=#{product_id}
     </select>
-
 
     <select id="selectAllProduct" resultType="Product">
         select * from product_fixed

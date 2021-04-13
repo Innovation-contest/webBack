@@ -10,7 +10,7 @@ public interface OrderMapper {
     List<Order> selectAllOrder();
 
     Order selectOrderById(int order_id);
-    Boolean insertOneOrder();
+    Boolean insertOneOrder(Order order);
 
 
 }

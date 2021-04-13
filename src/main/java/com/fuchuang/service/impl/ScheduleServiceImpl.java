@@ -1,10 +1,8 @@
 package com.fuchuang.service.impl;
 
 import com.fuchuang.mapper.ProductMapper;
-import com.fuchuang.pojo.Order;
-import com.fuchuang.pojo.Resource;
+import com.fuchuang.pojo.*;
 import com.fuchuang.pojo.Process;
-import com.fuchuang.pojo.SemiProduct;
 import com.fuchuang.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -77,7 +75,7 @@ public class ScheduleServiceImpl implements ScheduleService {
             //排入工序到资源中
             for(Process proc:processes.keySet()){
                 //res为当前工序所需资源列表
-                List<Resource> res = proc.getResource();
+                List<NeedResource> res = proc.getNeedResources();
                 //循环遍历所需资源
                 for(int j=0;j<res.size();j++){
                     //设置变量寻找最短队列
@@ -86,7 +84,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                     //遍历工厂资源列表
                     for(int i=0;i<resources.size();i++){
                         //匹配对应资源且时间最短
-                        if( resources.get(i).getType() == res.get(j).getType() && 
+                        if( resources.get(i).getType() == res.get(j).getResource_type() &&
                             resources.get(i).getWorkspace() == res.get(j).getWorkspace() &&
                             resources.get(i).getEnd_time() < oldest_time)
                         {

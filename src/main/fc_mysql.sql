@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2021/4/12 20:53:42                           */
+/* Created on:     2021/4/13 9:58:33                            */
 /*==============================================================*/
 
 
@@ -13,6 +13,8 @@ drop table if exists ordeinfo;
 drop table if exists processes;
 
 drop table if exists product_fixed;
+
+drop table if exists product_semi;
 
 drop table if exists real_product;
 
@@ -27,14 +29,15 @@ create table distri_process
 (
     process_id           int not null,
     resource_id          int not null,
-    semi_id              int,
+    semi_id              int not null,
     is_para              bool not null,
     max_para             int not null,
     oper_time            int not null,
     pro_workspace        varchar(20) not null,
     pro_start_time       int not null,
-    pro_end_time         int,
-    primary key (process_id)
+    pro_end_time         int not null,
+    id                   int not null,
+    primary key (id)
 );
 
 /*==============================================================*/
@@ -87,6 +90,16 @@ create table product_fixed
 );
 
 /*==============================================================*/
+/* Table: product_semi                                          */
+/*==============================================================*/
+create table product_semi
+(
+    product_id           int not null,
+    semi_id              int not null,
+    primary key (product_id, semi_id)
+);
+
+/*==============================================================*/
 /* Table: real_product                                          */
 /*==============================================================*/
 create table real_product
@@ -94,7 +107,8 @@ create table real_product
     product_id           int not null,
     order_id             int not null,
     product_num          int not null,
-    primary key (product_id)
+    id                   int not null,
+    primary key (id)
 );
 
 /*==============================================================*/
@@ -115,7 +129,6 @@ create table resource
 create table semi_product
 (
     semi_id              int not null,
-    product_id           int not null,
     primary key (semi_id)
 );
 
@@ -131,12 +144,53 @@ alter table need_resouce add constraint FK_pro_resouce foreign key (process_id)
 alter table processes add constraint FK_pro_semi foreign key (semi_id)
     references semi_product (semi_id) on delete restrict on update restrict;
 
+alter table product_semi add constraint FK_product_semi foreign key (product_id)
+    references product_fixed (product_id) on delete restrict on update restrict;
+
+alter table product_semi add constraint FK_product_semi2 foreign key (semi_id)
+    references semi_product (semi_id) on delete restrict on update restrict;
+
 alter table real_product add constraint FK_be_order foreign key (product_id)
     references product_fixed (product_id) on delete restrict on update restrict;
 
 alter table real_product add constraint FK_order_product foreign key (order_id)
     references ordeinfo (order_id) on delete restrict on update restrict;
 
-alter table semi_product add constraint FK_product_semi foreign key (product_id)
-    references product_fixed (product_id) on delete restrict on update restrict;
 
+insert into ordeinfo values (1, 1000, '12th服创大赛', 0,5,15);
+insert into ordeinfo values (2, 1050, '12th服创大赛', 0,0,3);
+insert into ordeinfo values (3, 950, '12th服创大赛', 0,10,25);
+
+
+insert into product_fixed values (1);
+insert into product_fixed values (2);
+insert into product_fixed values (3);
+insert into product_fixed values (4);
+insert into product_fixed values (5);
+insert into product_fixed values (6);
+
+insert into semi_product values (2),(3),(4),(5),(6);
+
+insert into product_semi values (1,2),
+                                (1,3),
+                                (1,4),
+                                (2,1),
+                                (2,5),
+                                (3,2),
+                                (3,6),
+                                (4,2),
+                                (4,4),
+                                (5,3),
+                                (5,6),
+                                (6,1),
+                                (6,2);
+
+
+
+insert into real_product values (5,1,18,1);
+insert into real_product values (6,1,6,2);
+insert into real_product values (4,2,10,3);
+insert into real_product values (2,2,15,4);
+insert into real_product values (5,2,18,5);
+insert into real_product values (3,3,15,6);
+insert into real_product values (1,3,10,7);

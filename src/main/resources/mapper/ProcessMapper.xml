@@ -2,3 +2,18 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fuchuang.mapper.ProcessMapper">
+    <resultMap id="processResultMap" type="com.fuchuang.pojo.Process">
+        <id property="id" column="process_id"/>
+        <result property="parallel" column="is_para"/>
+        <result property="max_num" column="max_para"/>
+        <result property="exec_time" column="oper_time"/>
+        <result property="workspace" column="pro_workspace"/>
+    </resultMap>
+
+    <select id="selectProcessBySemiId" parameterType="int" resultMap="processResultMap">
+        select * from processes where semi_id=#{semi_id}
+    </select>
+
+
+</mapper>

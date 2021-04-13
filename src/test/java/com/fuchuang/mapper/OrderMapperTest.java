@@ -1,6 +1,7 @@
 package com.fuchuang.mapper;
 
 import com.fuchuang.pojo.Order;
+import com.fuchuang.pojo.Product;
 import com.fuchuang.pojo.RealProduct;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,6 +20,9 @@ public class OrderMapperTest {
     @Autowired
     private  RealProductMapper realProductMapper;
 
+    @Autowired
+    private  ProductMapper productMapper;
+
     @Test
     public void allOrder(){
         List<Order> orders=orderMapper.selectAllOrder();
@@ -33,5 +37,11 @@ public class OrderMapperTest {
         for(RealProduct realProduct:realProducts){
             System.out.println(realProduct.toString());
         }
+    }
+
+    @Test
+    public void test_prosemi(){
+        Product product = productMapper.selectProductById(1);
+        System.out.println(product.toString());
     }
 }

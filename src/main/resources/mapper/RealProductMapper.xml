@@ -5,10 +5,8 @@
 <mapper namespace="com.fuchuang.mapper.RealProductMapper">
     <select id="findProductById" parameterType="int" resultType="RealProduct">
         select
-        id as "id",
-        order_id as "order_id",
-        product_id as "product_id",
-        product_num as "product_num"
+         product_id as "product_id",
+         product_num as "product_num"
         from real_product where order_id=#{order_id}
     </select>
 </mapper>

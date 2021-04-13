@@ -10,6 +10,7 @@ public class Process {
     private Boolean parallel;
     private String workspace;
     private int max_num;
-    private List<Resource> resource;
+    private int semi_id;
+    private List<NeedResource> needResources;
     private int exec_time;
 }

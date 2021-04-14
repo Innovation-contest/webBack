@@ -1,0 +1,950 @@
+[DEBUG][2021-04-14 10:43:48][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 10:43:48][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 10:43:48][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 10:43:48][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 10:43:48][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 10:43:48][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 10:43:48][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 10:43:48][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 10:43:48][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 10:43:49][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 10:43:49][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f713686] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 10:43:51][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1274225913, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from ordeinfo  
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters:  
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 3 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 3 
+[DEBUG][2021-04-14 10:43:51][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f713686] 
+[DEBUG][2021-04-14 10:43:51][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 10:43:51][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@667e34b1] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 10:43:51][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1840940155, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from ordeinfo where order_id=?  
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 10:43:51][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 10:43:51][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@667e34b1] 
+[DEBUG][2021-04-14 11:04:55][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 11:04:55][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 11:04:55][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 11:04:55][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 11:04:55][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 11:04:55][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 11:04:55][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 11:04:55][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 11:04:55][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 11:04:56][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 11:04:56][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b4dd216] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 11:04:58][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [212232499, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from ordeinfo  
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters:  
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 3 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 3 
+[DEBUG][2021-04-14 11:04:58][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b4dd216] 
+[DEBUG][2021-04-14 11:04:58][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 11:04:58][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@667e34b1] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 11:04:58][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1840940155, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from ordeinfo where order_id=?  
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 11:04:58][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 11:04:58][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@667e34b1] 
+[DEBUG][2021-04-14 11:52:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 11:52:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 11:52:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 11:52:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 11:52:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 11:52:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 11:52:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 11:58:30][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 11:58:30][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 11:58:30][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 11:58:30][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 11:58:30][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 11:58:30][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 11:58:30][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 11:58:30][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 11:58:30][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 11:58:31][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 11:58:31][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7adbd080] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 11:58:33][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1671007220, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 11:58:33][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 11:58:33][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 11:58:33][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 11:58:33][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7adbd080] 
+[DEBUG][2021-04-14 13:56:05][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 13:56:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 13:56:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 13:56:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 13:56:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 13:56:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 13:56:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 13:56:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 13:56:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 13:56:07][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 13:56:07][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62f87c44] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 13:56:10][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1925059423, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 13:56:10][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into ordeinfo (order_id, order_end_time, order_descri, order_start_time) values (?,?,?,?)  
+[DEBUG][2021-04-14 13:56:10][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 8(Integer), 100(Integer), 12th服创大赛(String), 0(Integer) 
+[DEBUG][2021-04-14 13:56:10][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 13:56:10][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62f87c44] 
+[DEBUG][2021-04-14 13:56:10][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 13:56:10][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45673f68] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 13:56:10][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [2123846943, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 13:56:10][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into real_product (product_id, order_id, product_num) values (?,?,?)  
+[DEBUG][2021-04-14 13:56:10][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45673f68] 
+[DEBUG][2021-04-14 14:02:52][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 14:02:53][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:02:53][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:02:53][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 14:02:53][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:02:53][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 14:02:53][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 14:02:53][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:02:53][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 14:02:54][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 14:02:54][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62f87c44] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 14:02:56][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1925059423, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 14:02:56][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into ordeinfo (order_id, order_end_time, order_descri, order_start_time) values (?,?,?,?)  
+[DEBUG][2021-04-14 14:02:56][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 8(Integer), 100(Integer), 12th服创大赛(String), 0(Integer) 
+[DEBUG][2021-04-14 14:02:56][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 14:02:56][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62f87c44] 
+[DEBUG][2021-04-14 14:02:56][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 14:02:56][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45673f68] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 14:02:57][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [2123846943, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 14:02:57][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into real_product (product_id, order_id, product_num) values (?,?,?)  
+[DEBUG][2021-04-14 14:02:57][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45673f68] 
+[DEBUG][2021-04-14 14:09:31][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 14:09:31][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:09:31][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:09:31][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 14:09:31][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:09:31][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 14:09:31][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 14:09:31][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:09:31][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 14:09:34][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 14:09:34][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:130) Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:09:34][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1166361824, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will be managed by Spring 
+[DEBUG][2021-04-14 14:09:34][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into ordeinfo (order_id, order_end_time, order_descri, order_start_time) values (?,?,?,?)  
+[DEBUG][2021-04-14 14:09:34][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 8(Integer), 100(Integer), 12th服创大赛(String), 0(Integer) 
+[DEBUG][2021-04-14 14:09:34][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 14:09:34][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:09:34][main] org.mybatis.spring.SqlSessionUtils.sessionHolder(SqlSessionUtils.java:165) Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] from current transaction 
+[DEBUG][2021-04-14 14:09:34][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into real_product (product_id, order_id, product_num) values (?,?,?)  
+[DEBUG][2021-04-14 14:09:34][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:09:34][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:312) Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:09:34][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:317) Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:10:28][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 14:10:29][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:10:29][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:10:29][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 14:10:29][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:10:29][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 14:10:29][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 14:10:29][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:10:29][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 14:10:31][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 14:10:31][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:130) Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:10:31][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1166361824, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will be managed by Spring 
+[DEBUG][2021-04-14 14:10:31][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into ordeinfo (order_id, order_end_time, order_descri, order_start_time) values (?,?,?,?)  
+[DEBUG][2021-04-14 14:10:31][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 8(Integer), 100(Integer), 12th服创大赛(String), 0(Integer) 
+[DEBUG][2021-04-14 14:10:31][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 14:10:31][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:10:31][main] org.mybatis.spring.SqlSessionUtils.sessionHolder(SqlSessionUtils.java:165) Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] from current transaction 
+[DEBUG][2021-04-14 14:10:31][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into real_product (product_id, order_id, product_num) values (?,?,?)  
+[DEBUG][2021-04-14 14:10:31][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:10:32][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:312) Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:10:32][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:317) Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:13:49][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 14:13:49][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:13:49][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:13:49][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 14:13:49][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:13:49][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 14:13:49][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 14:13:49][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:13:49][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 14:13:52][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 14:13:52][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:130) Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:13:52][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1166361824, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will be managed by Spring 
+[DEBUG][2021-04-14 14:13:52][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into ordeinfo (order_id, order_end_time, order_descri, order_start_time) values (?,?,?,?)  
+[DEBUG][2021-04-14 14:13:52][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 8(Integer), 100(Integer), 12th服创大赛(String), 0(Integer) 
+[DEBUG][2021-04-14 14:13:52][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 14:13:52][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:13:52][main] org.mybatis.spring.SqlSessionUtils.sessionHolder(SqlSessionUtils.java:165) Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] from current transaction 
+[DEBUG][2021-04-14 14:13:52][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into real_product (product_id, order_id, product_num) values (?,?,?)  
+[DEBUG][2021-04-14 14:13:52][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:13:52][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:312) Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:13:52][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:317) Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:14:59][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 14:14:59][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:14:59][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:14:59][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 14:14:59][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:14:59][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 14:14:59][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 14:14:59][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:14:59][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 14:15:02][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 14:15:02][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:130) Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:15:02][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1166361824, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will be managed by Spring 
+[DEBUG][2021-04-14 14:15:02][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into ordeinfo (order_id, order_end_time, order_descri, order_start_time) values (?,?,?,?)  
+[DEBUG][2021-04-14 14:15:02][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 8(Integer), 100(Integer), 12th服创大赛(String), 0(Integer) 
+[DEBUG][2021-04-14 14:15:02][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 14:15:02][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:15:02][main] org.mybatis.spring.SqlSessionUtils.sessionHolder(SqlSessionUtils.java:165) Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] from current transaction 
+[DEBUG][2021-04-14 14:15:02][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into real_product (product_id, order_id, product_num) values (?,?,?)  
+[DEBUG][2021-04-14 14:15:02][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer), 8(Integer), 5(Integer) 
+[DEBUG][2021-04-14 14:15:02][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:15:02][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:312) Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:15:02][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:317) Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:18:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 14:18:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:18:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:18:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 14:18:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 14:18:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 14:18:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 14:18:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 14:18:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 14:18:22][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 14:18:22][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:130) Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:18:22][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1166361824, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will be managed by Spring 
+[DEBUG][2021-04-14 14:18:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into ordeinfo (order_id, order_end_time, order_descri, order_start_time) values (?,?,?,?)  
+[DEBUG][2021-04-14 14:18:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 8(Integer), 100(Integer), 12th服创大赛(String), 0(Integer) 
+[DEBUG][2021-04-14 14:18:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 14:18:22][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:18:22][main] org.mybatis.spring.SqlSessionUtils.sessionHolder(SqlSessionUtils.java:165) Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] from current transaction 
+[DEBUG][2021-04-14 14:18:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into real_product (product_id, order_id, product_num) values (?,?,?)  
+[DEBUG][2021-04-14 14:18:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer), 8(Integer), 5(Integer) 
+[DEBUG][2021-04-14 14:18:22][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:18:22][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:312) Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 14:18:22][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:317) Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:52:34][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 16:52:34][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 16:52:34][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 16:52:34][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 16:52:34][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 16:52:34][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 16:52:34][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 16:52:34][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 16:52:34][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 16:52:37][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 16:52:37][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:130) Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:52:37][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1166361824, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will be managed by Spring 
+[DEBUG][2021-04-14 16:52:37][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into ordeinfo (order_id, order_end_time, order_descri, order_start_time) values (?,?,?,?)  
+[DEBUG][2021-04-14 16:52:37][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 8(Integer), 100(Integer), 12th服创大赛(String), 0(Integer) 
+[DEBUG][2021-04-14 16:52:37][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 16:52:37][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:52:37][main] org.mybatis.spring.SqlSessionUtils.sessionHolder(SqlSessionUtils.java:165) Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] from current transaction 
+[DEBUG][2021-04-14 16:52:37][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into real_product (product_id, order_id, product_num) values (?,?,?)  
+[DEBUG][2021-04-14 16:52:37][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer), 8(Integer), 5(Integer) 
+[DEBUG][2021-04-14 16:52:37][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 16:52:37][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:52:37][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:312) Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:52:37][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:317) Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:53:24][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 16:53:25][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 16:53:25][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 16:53:25][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 16:53:25][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 16:53:25][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 16:53:25][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 16:53:25][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 16:53:25][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 16:53:27][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 16:53:27][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:130) Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:53:27][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1166361824, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will be managed by Spring 
+[DEBUG][2021-04-14 16:53:27][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into ordeinfo (order_id, order_end_time, order_descri, order_start_time) values (?,?,?,?)  
+[DEBUG][2021-04-14 16:53:27][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 8(Integer), 100(Integer), 12th服创大赛(String), 0(Integer) 
+[DEBUG][2021-04-14 16:53:27][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 16:53:27][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:53:27][main] org.mybatis.spring.SqlSessionUtils.sessionHolder(SqlSessionUtils.java:165) Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] from current transaction 
+[DEBUG][2021-04-14 16:53:27][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into real_product (product_id, order_id, product_num) values (?,?,?)  
+[DEBUG][2021-04-14 16:53:27][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer), 8(Integer), 5(Integer) 
+[DEBUG][2021-04-14 16:53:27][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 16:53:28][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:188) Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:53:28][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:312) Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:53:28][main] org.mybatis.spring.SqlSessionUtils$SqlSessionSynchronization.beforeCompletion(SqlSessionUtils.java:317) Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b32cd16] 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 16:54:37][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62f87c44] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 16:54:40][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1925059423, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 16:54:40][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into ordeinfo (order_id, order_end_time, order_descri, order_start_time) values (?,?,?,?)  
+[DEBUG][2021-04-14 16:54:40][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 8(Integer), 100(Integer), 12th服创大赛(String), 0(Integer) 
+[DEBUG][2021-04-14 16:54:40][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 16:54:40][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62f87c44] 
+[DEBUG][2021-04-14 16:54:40][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 16:54:40][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45673f68] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 16:54:40][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1887466020, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 16:54:40][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: insert into real_product (product_id, order_id, product_num) values (?,?,?)  
+[DEBUG][2021-04-14 16:54:40][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer), 8(Integer), 5(Integer) 
+[DEBUG][2021-04-14 16:54:40][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==    Updates: 1 
+[DEBUG][2021-04-14 16:54:40][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45673f68] 
+[DEBUG][2021-04-14 18:11:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 18:11:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 18:11:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 18:11:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 18:11:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 18:11:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 18:11:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 18:11:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 18:11:06][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 18:11:46][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 18:11:46][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 18:11:46][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 18:11:46][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 18:11:46][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 18:11:46][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 18:11:46][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 18:11:46][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 18:11:46][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 18:11:47][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 18:11:47][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48f5bde6] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 18:11:49][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1940912369, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 18:11:49][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from resource  
+[DEBUG][2021-04-14 18:11:49][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters:  
+[DEBUG][2021-04-14 18:11:49][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 0 
+[DEBUG][2021-04-14 18:11:49][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48f5bde6] 
+[DEBUG][2021-04-14 18:14:56][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 18:14:56][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 18:14:56][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 18:14:56][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 18:14:56][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 18:14:56][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 18:14:56][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 18:14:56][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 18:14:56][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 18:14:57][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 18:14:57][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48f5bde6] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 18:14:59][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1940912369, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 18:14:59][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from resource  
+[DEBUG][2021-04-14 18:14:59][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters:  
+[DEBUG][2021-04-14 18:14:59][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id as "id", resource_id as "resource_id", semi_id as "semi_id", is_para as "parallel", max_para as "max_num", oper_time as "exec_time", pro_workspace as "workspace", pro_start_time as "start_time", pro_end_time as "end_time" from distri_process where resource_id=? order by end_time  
+[DEBUG][2021-04-14 18:14:59][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 18:14:59][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 0 
+[DEBUG][2021-04-14 18:14:59][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id as "id", resource_id as "resource_id", semi_id as "semi_id", is_para as "parallel", max_para as "max_num", oper_time as "exec_time", pro_workspace as "workspace", pro_start_time as "start_time", pro_end_time as "end_time" from distri_process where resource_id=? order by end_time  
+[DEBUG][2021-04-14 18:14:59][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 18:14:59][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 0 
+[DEBUG][2021-04-14 18:14:59][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 18:14:59][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48f5bde6] 
+[DEBUG][2021-04-14 22:46:23][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 22:46:23][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 22:46:23][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 22:46:23][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 22:46:23][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 22:46:23][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 22:46:23][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 22:46:23][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 22:46:23][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 22:46:24][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 22:46:24][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@525d79f0] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 22:46:26][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [667680223, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:46:26][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from resource  
+[DEBUG][2021-04-14 22:46:26][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters:  
+[DEBUG][2021-04-14 22:46:26][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id as "id", resource_id as "resource_id", semi_id as "semi_id", is_para as "parallel", max_para as "max_num", oper_time as "exec_time", pro_workspace as "workspace", pro_start_time as "start_time", pro_end_time as "end_time" from distri_process where resource_id=? order by end_time  
+[DEBUG][2021-04-14 22:46:26][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 22:46:26][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 0 
+[DEBUG][2021-04-14 22:46:26][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id as "id", resource_id as "resource_id", semi_id as "semi_id", is_para as "parallel", max_para as "max_num", oper_time as "exec_time", pro_workspace as "workspace", pro_start_time as "start_time", pro_end_time as "end_time" from distri_process where resource_id=? order by end_time  
+[DEBUG][2021-04-14 22:46:26][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 22:46:26][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 0 
+[DEBUG][2021-04-14 22:46:26][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 22:46:26][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@525d79f0] 
+[DEBUG][2021-04-14 22:48:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 22:48:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 22:48:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 22:48:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 22:48:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 22:48:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 22:48:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 22:48:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 22:48:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 22:48:22][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 22:48:22][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1272115420, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from orderinfo where order_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [2049348234, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1052399527, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 9(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 10(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 11(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 12(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 17(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 18(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61533ae] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1913017282, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61533ae] 
+[DEBUG][2021-04-14 22:48:24][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1340086275, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 4(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 7(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 8(Integer) 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 22:48:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 22:55:03][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 22:55:03][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 22:55:03][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 22:55:03][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 22:55:03][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 22:55:03][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 22:55:03][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 22:55:03][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 22:55:04][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 22:55:04][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 22:55:04][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1272115420, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from orderinfo where order_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [2049348234, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1052399527, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 9(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 10(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 11(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 12(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 17(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 18(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61533ae] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1913017282, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61533ae] 
+[DEBUG][2021-04-14 22:55:07][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1340086275, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 4(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 7(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 8(Integer) 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 22:55:07][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 23:08:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 23:08:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 23:08:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 23:08:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 23:08:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 23:08:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 23:08:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 23:08:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 23:08:17][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 23:08:18][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:08:18][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1272115420, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from orderinfo where order_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [2049348234, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1052399527, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 9(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 10(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 11(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 12(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 17(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 18(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61533ae] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1913017282, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61533ae] 
+[DEBUG][2021-04-14 23:08:21][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1340086275, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 4(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 7(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 8(Integer) 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:08:21][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 23:10:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 23:10:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 23:10:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 23:10:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 23:10:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 23:10:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 23:10:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 23:10:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 23:10:21][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 23:10:22][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:10:22][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1272115420, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from orderinfo where order_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [2049348234, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1052399527, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 9(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 10(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 11(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 12(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 17(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 18(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61533ae] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1913017282, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61533ae] 
+[DEBUG][2021-04-14 23:10:24][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1340086275, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 4(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 7(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resouce_type", resouce_num as "resouce_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 8(Integer) 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:10:24][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 23:23:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 23:23:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 23:23:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 23:23:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 23:23:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 23:23:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 23:23:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 23:23:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 23:23:19][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 23:23:20][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:23:20][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1272115420, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from orderinfo where order_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [2049348234, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1052399527, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 9(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 10(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 11(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 12(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 17(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 18(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45f24169] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1147394515, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45f24169] 
+[DEBUG][2021-04-14 23:23:22][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1164289802, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 4(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 7(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 8(Integer) 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:23:22][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 23:28:10][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:496) Parsed configuration file: 'class path resource [mybatis-config.xml]' 
+[DEBUG][2021-04-14 23:28:10][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\DistriProcessMapper.xml]' 
+[DEBUG][2021-04-14 23:28:10][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\NeedResourceMapper.xml]' 
+[DEBUG][2021-04-14 23:28:10][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\OrderMapper.xml]' 
+[DEBUG][2021-04-14 23:28:10][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProcessMapper.xml]' 
+[DEBUG][2021-04-14 23:28:10][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ProductMapper.xml]' 
+[DEBUG][2021-04-14 23:28:10][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\RealProductMapper.xml]' 
+[DEBUG][2021-04-14 23:28:10][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\ResourceMapper.xml]' 
+[DEBUG][2021-04-14 23:28:10][main] org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:528) Parsed mapper file: 'file [D:\ideaku\paichan\target\classes\mapper\SemiProductMapper.xml]' 
+[DEBUG][2021-04-14 23:28:11][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:28:11][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1272115420, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from orderinfo where order_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select order_id as "order_id", product_id as "product_id", product_num as "product_num" from real_product where order_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c77053b] 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [2049348234, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e93f3d5] 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1052399527, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 9(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 10(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 11(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 12(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 17(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 18(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 2 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.SqlSessionUtils.getSqlSession(SqlSessionUtils.java:99) Creating a new SqlSession 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.SqlSessionUtils.registerSessionHolder(SqlSessionUtils.java:150) SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45f24169] was not registered for synchronization because synchronization is not active 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1147394515, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select * from product_fixed pf where pf.product_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 1 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.SqlSessionUtils.closeSqlSession(SqlSessionUtils.java:193) Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45f24169] 
+[DEBUG][2021-04-14 23:28:13][main] org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:89) JDBC Connection [1164289802, URL=jdbc:mysql://localhost:3306/schedule?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC, MySQL Connector Java] will not be managed by Spring 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==>  Preparing: select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=?)  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ==> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 1(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 3(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 4(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====>  Preparing: select process_id, semi_id, is_para, max_para, oper_time, pro_workspace from processes where semi_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ====> Parameters: 2(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 5(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 6(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 7(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======>  Preparing: select resource_type as "resource_type", resouce_num as "resource_num", process_id as "process_id" from need_resouce where process_id=?  
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) ======> Parameters: 8(Integer) 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <======      Total: 3 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <====      Total: 4 
+[DEBUG][2021-04-14 23:28:13][main] org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159) <==      Total: 2 

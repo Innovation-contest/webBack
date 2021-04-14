@@ -7,7 +7,11 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -27,6 +31,9 @@ public class OrderMapperTest {
 
     @Autowired
     private SemiProductMapper semiProductMapper;
+
+    @Autowired
+    private ResourceMapper resourceMapper;
 
     @Test
     public void allOrder(){
@@ -65,5 +72,30 @@ public class OrderMapperTest {
         for(Process process:processes){
             System.out.println(process.toString());
         }
+    }
+
+    @Test
+//    @Transactional(propagation = Propagation.REQUIRED)
+    public void add_order(){
+        Order order=new Order();
+        order.setOrder_description("12th服创大赛");
+        order.setOrder_id(8);
+        order.setStart_time(0);
+        order.setEnd_time(100);
+        List<RealProduct> realProducts= new ArrayList<>();
+        RealProduct realProduct1 =new RealProduct();
+        realProduct1.setProduct_id(1);
+        realProduct1.setOrder_id(8);
+        realProduct1.setProduct_num(5);
+        realProducts.add(realProduct1);
+
+        orderMapper.insertOneOrder(order);
+        realProductMapper.insertProducts(realProducts);
+
+    }
+
+    @Test
+    public void resource(){
+        resourceMapper.selectAllResource();
     }
 }

@@ -14,5 +14,5 @@ public class Order {
     private int real_end_time;
     private String order_description;
     private List<RealProduct> products;
-    private Map<Integer,Integer> product_semis;
+    private Map<SemiProduct,Integer> product_semis;
 }

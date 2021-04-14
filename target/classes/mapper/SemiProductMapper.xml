@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fuchuang.mapper.SemiProductMapper">
+    <resultMap id="semiResultMap" type="com.fuchuang.pojo.SemiProduct">
+        <id property="id" column="semi_id"/>
+        <collection property="processes" column="semi_id" javaType="java.util.List" select="com.fuchuang.mapper.ProcessMapper.selectProcessBySemiId"/>
+    </resultMap>
+
+    <select id="selectSemiByProductId" parameterType="int" resultMap="semiResultMap">
+        select
+        semi_id
+        from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=#{product_id})
+    </select>
+</mapper>

@@ -1,13 +1,8 @@
 package com.fuchuang.service.impl;
 
 import com.fuchuang.mapper.ProductMapper;
-<<<<<<< HEAD
 import com.fuchuang.mapper.ResourceMapper;
-import com.fuchuang.pojo.Order;
-import com.fuchuang.pojo.Resource;
-=======
 import com.fuchuang.pojo.*;
->>>>>>> b27098576b739ae9263a914bbc1ef682dd34eb3c
 import com.fuchuang.pojo.Process;
 import com.fuchuang.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;

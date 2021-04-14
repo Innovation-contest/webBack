@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fuchuang.mapper.ProductMapper">
+    <resultMap id="productResultMap" type="com.fuchuang.pojo.Product">
+        <id property="product_id" column="product_id"/>
+        <collection property="semiProducts" javaType="ArrayList" column="product_id" ofType="com.fuchuang.pojo.SemiProduct"
+                    select="com.fuchuang.mapper.SemiProductMapper.selectSemiByProductId" fetchType="lazy">
+<!--            <id property="id" column="semi_id"/>-->
+<!--            <collection property="processes" column="semi_id" javaType="ArrayList" ofType="com.fuchuang.pojo.Process"-->
+<!--                        select="com.fuchuang.mapper.ProcessMapper.selectProcessBySemiId">-->
+<!--            </collection>-->
+        </collection>
+    </resultMap>
+
+    <select id="selectProductById" resultMap="productResultMap" parameterType="int">
+        select * from product_fixed pf
+             where pf.product_id=#{product_id}
+    </select>
+
+    <select id="selectAllProduct" resultType="Product">
+        select * from product_fixed
+    </select>
+</mapper>

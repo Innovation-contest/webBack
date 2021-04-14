@@ -1,6 +1,7 @@
 package com.fuchuang.service.impl;
 
 import com.fuchuang.mapper.ProductMapper;
+import com.fuchuang.mapper.ResourceMapper;
 import com.fuchuang.pojo.*;
 import com.fuchuang.pojo.Process;
 import com.fuchuang.service.ScheduleService;
@@ -17,6 +18,12 @@ public class ScheduleServiceImpl implements ScheduleService {
 
     @Autowired
     private ProductMapper productMapper;
+
+    @Autowired
+    private ResourceMapper resourceMapper;
+
+    @Autowired
+    private SplitOrderImpl splitOrder;
     /**
      *
      * @param orders 拆分好的订单列表
@@ -24,39 +31,21 @@ public class ScheduleServiceImpl implements ScheduleService {
      */
     @Override
     public List<Resource> schedule(List<Order> orders) {
-        List<Resource> resources = null;
+        List<Resource> resources = resourceMapper.selectAllResource();
         //...调用数据库界面以获取资源列表
-        
-        Map<Integer,Integer> product_semis = new HashMap<>();
-
-        //收集每个订单的半成品列表
-        for(int i=0;i<orders.size();i++){
-            Map<Integer,Integer> temp;
-
-            temp = orders.get(i).getProduct_semis();
-            for(int key:temp.keySet()){
-                int num = temp.get(key);
-                if(num != 0){
-                    if(product_semis.containsKey(key)){
-                        num += product_semis.get(key);
-                    }
-                    product_semis.put(key, num);
-                }
-            }
-        }
 
         //将半成品集合对应为实例集合
         List<SemiProduct> semis_todo = new ArrayList<>();
-        
-        for(int key:product_semis.keySet()){
-            //...调用半成品以获得半成品的产品实例
-        }
 
+        //收集每个订单的半成品列表
+        for(int i=0;i<orders.size();i++){
+            semis_todo.addAll(splitOrder.split(orders.get(i)));
+        }
 
         while(semis_todo.size() != 0){
             //收集每个半成品首要的工序到processes列表中
             Map<Process,Integer>processes = new HashMap<>();
-            
+
             for(int i=semis_todo.size()-1;i>=0;i--){
                 //得到当前半成品首要工序
                 Process proc = semis_todo.get(i).getProcesses().get(semis_todo.get(i).getSeq());
@@ -65,7 +54,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                 //判断是否为最后一道工序
                 if(!semis_todo.get(i).isBottom()){
                     //调整列表指针seq到下一位
-                    semis_todo.get(i).setSeq(semis_todo.get(i).getSeq()+1);           
+                    semis_todo.get(i).setSeq(semis_todo.get(i).getSeq()+1);
                 }
                 else{
                     semis_todo.remove(i);
@@ -85,8 +74,8 @@ public class ScheduleServiceImpl implements ScheduleService {
                     for(int i=0;i<resources.size();i++){
                         //匹配对应资源且时间最短
                         if( resources.get(i).getType() == res.get(j).getResource_type() &&
-                            resources.get(i).getWorkspace() == res.get(j).getWorkspace() &&
-                            resources.get(i).getEnd_time() < oldest_time)
+                             //   resources.get(i).getWorkspace() == res.get(j).getWorkspace() &&
+                                resources.get(i).getEnd_time() < oldest_time)
                         {
                             //匹配成功后更新变量
                             oldest_time = resources.get(i).getEnd_time();
@@ -97,7 +86,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                         //将当前工序加入工厂资源队列
                         List<Process> temp = resources.get(insert_id).getProcesses();
                         temp.add(proc);
-                        resources.get(insert_id).setProcesses(temp);                  
+                        resources.get(insert_id).setProcesses(temp);
                     }
                     else{
                         System.out.println("Can't insert!");

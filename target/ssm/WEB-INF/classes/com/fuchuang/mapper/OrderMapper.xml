@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fuchuang.mapper.OrderMapper">
+    <resultMap id="orderResult" type="Order">
+        <id property="id" column="order_id"/>
+        <result property="end_time" column="order_end_time"/>
+        <result property="start_time" column="order_start_time"/>
+        <result property="order_description" column="order_descri"/>
+        <result property="real_start_time" column="real_start_time"/>
+        <result property="real_end_time" column="real_end_time"/>
+        <collection property="products" column="id" javaType="Product" select="com.fuchuang.mapper.RealProductMapper.findProductById"/>
+    </resultMap>
+
+    <select id="selectOrderById" parameterType="int" resultMap="orderResult">
+        select *
+        from ordeinfo
+    </select>
+</mapper>
+

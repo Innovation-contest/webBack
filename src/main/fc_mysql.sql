@@ -8,7 +8,7 @@ drop table if exists distri_process;
 
 drop table if exists need_resouce;
 
-drop table if exists ordeinfo;
+drop table if exists orderinfo;
 
 drop table if exists processes;
 
@@ -154,12 +154,12 @@ alter table real_product add constraint FK_be_order foreign key (product_id)
     references product_fixed (product_id) on delete restrict on update restrict;
 
 alter table real_product add constraint FK_order_product foreign key (order_id)
-    references ordeinfo (order_id) on delete restrict on update restrict;
+    references orderinfo (order_id) on delete restrict on update restrict;
 
 
-insert into ordeinfo values (1, 1000, '12th服创大赛', 0,5,15);
-insert into ordeinfo values (2, 1050, '12th服创大赛', 0,0,3);
-insert into ordeinfo values (3, 950, '12th服创大赛', 0,10,25);
+insert into orderinfo values (1, 1000, '12th服创大赛', 0,5,15);
+insert into orderinfo values (2, 1050, '12th服创大赛', 0,0,3);
+insert into orderinfo values (3, 950, '12th服创大赛', 0,10,25);
 
 
 insert into product_fixed values (1);

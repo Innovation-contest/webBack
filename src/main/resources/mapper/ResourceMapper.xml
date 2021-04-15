@@ -9,13 +9,13 @@
         <result property="workspace" column="workspace"/>
         <result property="type" column="resource_type"/>
         <result property="end_time" column="to_free_time"/>
-        <collection property="processes" column="resource_id" javaType="java.util.List" select="com.fuchuang.mapper.DistriProcessMapper.selectDProcessByResouceId"/>
+        <collection property="processes" column="resource_id" javaType="java.util.List" select="com.fuchuang.mapper.DistriProcessMapper.selectDProcessByResourceId"/>
     </resultMap>
 <!-- 未测试-->
     <insert id="insertResource" parameterType="com.fuchuang.pojo.Resource">
-        insert into resource (resource_id, workspace, resource_type, to_free_time)
+        insert into resource (workspace, resource_type, to_free_time)
 <!--        <foreach item="com.fuchuang.pojo.Resource" collection="list" separator=",">-->
-            values (#{id},#{workspace},#{type},#{end_time})
+            values (#{workspace},#{type},#{end_time})
 <!--        </foreach>-->
     </insert>
 
@@ -32,4 +32,14 @@
     <select id="selectAllResource" resultMap="resourceResultMap">
         select * from resource
     </select>
+
+    <delete id="deleteResource" parameterType="int">
+        delete from resource where resource_id=#{resource_id}
+    </delete>
+
+    <select id="selectResourceType" resultType="com.fuchuang.pojo.ResourceType">
+        select count(*) as amount, workspace as "workspace",resource_type as "resource_type"
+        from resource where workspace=#{0} and resource_type=#{1}
+    </select>
+
 </mapper>

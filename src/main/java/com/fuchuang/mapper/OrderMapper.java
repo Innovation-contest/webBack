@@ -33,4 +33,10 @@ public interface OrderMapper {
      * @return 更新是否成功
      */
     Boolean updataOrderById(Order order);
+
+
+    /**
+     *
+     */
+    Boolean deleteOneOrderById(int order_id);
 }

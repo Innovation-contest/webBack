@@ -19,5 +19,7 @@ public interface RealProductMapper {
      * @param realProducts 商品列表
      * @return 是否插入成功
      */
-    int insertProducts(List<RealProduct> realProducts);
+    Boolean insertProducts(List<RealProduct> realProducts);
+
+    Boolean deleteProductByOrderId(int order_id);
 }

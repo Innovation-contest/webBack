@@ -9,7 +9,7 @@
         <result property="workspace" column="workspace"/>
         <result property="type" column="resource_type"/>
         <result property="end_time" column="to_free_time"/>
-        <collection property="processes" column="resource_id" javaType="java.util.List" select="com.fuchuang.mapper.DistriProcessMapper.selectDProcessByResouceId"/>
+        <collection property="processes" column="resource_id" javaType="java.util.List" select="com.fuchuang.mapper.DistriProcessMapper.selectDProcessByResourceId"/>
     </resultMap>
 <!-- 未测试-->
     <insert id="insertResource" parameterType="com.fuchuang.pojo.Resource">

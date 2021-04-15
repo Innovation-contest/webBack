@@ -185,6 +185,21 @@ insert into product_semi values (1,2),
                                 (6,1),
                                 (6,2);
 
+insert into product_fixed values (1);
+
+insert into product_fixed (product_id) values (1);
+insert into  semi_product (semi_id) values (2);
+insert into product_semi (product_id, semi_id) values (1,2);
+insert into resource (resource_id, workspace, resource_type, to_free_time) values
+    (1,'produce','机床',30);
+insert into need_resouce (resource_type, resouce_num, process_id) values
+    ('人员',2,1);
+insert into processes (process_id, semi_id, is_para, max_para, oper_time, pro_workspace) values
+    (1,1,true,10,20,'assemble');
+
+
+
+
 insert into processes values (1,1,true,10,5,'Processing'),
                              (2,1,false,1,10,'Processing'),
                              (3,1,false,1,2,'Processing'),

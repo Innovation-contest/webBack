@@ -13,9 +13,12 @@ public interface ResourceMapper {
 
     /**
      * 批量更新resource的结束时间
-     * @param resources
-     * @return
+     * @param resources resource列表
+     * @return 更新是否成功
      */
-    int updateResource(List<Resource> resources);
+    Boolean updateResource(List<Resource> resources);
+
+
+    Boolean insertResource(Resource resource);
 
 }

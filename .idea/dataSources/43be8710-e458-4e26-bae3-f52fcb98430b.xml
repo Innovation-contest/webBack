@@ -1202,6 +1202,7 @@ semi_id</ColNames>
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="352" parent="294" name="workspace">
       <Position>2</Position>

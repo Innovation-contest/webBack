@@ -10,7 +10,7 @@ public interface DistriProcessMapper {
      * @param resource_id resource编号
      * @return resource上已经分配的工序列表
      */
-    List<Process> selectDProcessByResouceId(int resource_id);
+    List<Process> selectDProcessByResourceId(int resource_id);
 
     /**
      *
@@ -18,4 +18,7 @@ public interface DistriProcessMapper {
      * @return 是否插入成功
      */
     Boolean insertDProcesses(List<Process> processes);
+
+
+    Boolean deleteBYResourceId(int resource_id);
 }

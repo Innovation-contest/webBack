@@ -17,4 +17,10 @@
                     (#{RealProduct.product_id},#{RealProduct.order_id},#{RealProduct.product_num})
             </foreach>
     </insert>
+
+
+    <delete id="deleteProductByOrderId" parameterType="int">
+        delete from real_product where order_id=#{order_id}
+    </delete>
+
 </mapper>

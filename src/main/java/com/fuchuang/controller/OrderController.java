@@ -1,35 +1,32 @@
 package com.fuchuang.controller;
 
-import com.fuchuang.mapper.OrderMapper;
 import com.fuchuang.pojo.Order;
 import com.fuchuang.pojo.Resource;
 import com.fuchuang.service.OrderService;
 import com.fuchuang.service.ResourceService;
-import com.fuchuang.service.impl.OrderServiceImpl;
-import com.fuchuang.service.impl.ResourceServiceImpl;
-import org.apache.ibatis.annotations.ResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.jws.WebMethod;
 import java.util.List;
 
-@RequestMapping("/admin/orders")
+@RequestMapping("/orders")
 @Controller
-public class AdminController {
+public class OrderController {
 
     @Autowired
-    private OrderServiceImpl orderService;
+    private OrderService orderServiceImpl;
 
     @Autowired
-    private ResourceServiceImpl resourceService;
+    private ResourceService resourceServiceImpl;
 
     @ResponseBody
     @RequestMapping("/getorderlist")
     public List<Order> getAll(){
-        List<Order> orders=orderService.selectAllOrder();
+        List<Order> orders=orderServiceImpl.selectAllOrder();
         return  orders;
     }
 
@@ -37,14 +34,30 @@ public class AdminController {
     @ResponseBody
     @RequestMapping("/addorder")
     public Boolean addOrder(@RequestParam Order order){
-        Boolean status=orderService.insertOneOrder(order);
+        Boolean status=orderServiceImpl.insertOneOrder(order);
         return status;
     }
+
+
+    @ResponseBody
+    @RequestMapping(value = "/updateorder")
+    public Boolean updateorder(@RequestParam Order order){
+        return orderServiceImpl.updateOrder(order);
+    }
+
+
+    @ResponseBody
+    @RequestMapping("/delorder")
+    public Boolean delete_order(@RequestParam int order_id){
+        Boolean status=orderServiceImpl.deleteOrderById(order_id);
+        return status;
+    }
+
 
     @ResponseBody
     @RequestMapping("/")
     public List<Resource> scheduleResult(){
-        return resourceService.selectAllResource();
+        return resourceServiceImpl.selectAllResource();
     }
 
 

@@ -28,7 +28,13 @@
     </insert>
 
     <update id="updataOrderById" parameterType="com.fuchuang.pojo.Order">
-        update orderinfo set real_start_time=#{real_start_time},real_end_time=#{real_end_time} where order_id=#{order_id}
+        update orderinfo set order_end_time=#{end_time}, real_start_time=#{real_start_time},real_end_time=#{real_end_time} where order_id=#{order_id}
     </update>
+
+
+    
+    <delete id="deleteOneOrderById" parameterType="int">
+        delete from orderinfo where order_id=#{order_id}
+    </delete>
 </mapper>
 

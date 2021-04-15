@@ -74,7 +74,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                     for(int i=0;i<resources.size();i++){
                         //匹配对应资源且时间最短
                         if( resources.get(i).getType() == res.get(j).getResource_type() &&
-                             //   resources.get(i).getWorkspace() == res.get(j).getWorkspace() &&
+//                                resources.get(i).getWorkspace() == res.get(j).getWorkspace() &&
                                 resources.get(i).getEnd_time() < oldest_time)
                         {
                             //匹配成功后更新变量

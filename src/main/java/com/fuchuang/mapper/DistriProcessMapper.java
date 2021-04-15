@@ -17,5 +17,5 @@ public interface DistriProcessMapper {
      * @param processes 分配在一个resource的工序list
      * @return 是否插入成功
      */
-    int insertDProcesses(List<Process> processes);
+    Boolean insertDProcesses(List<Process> processes);
 }

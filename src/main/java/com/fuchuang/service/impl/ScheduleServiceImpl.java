@@ -32,14 +32,14 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
     public List<Resource> schedule(List<Order> orders) {
         List<Resource> resources = resourceMapper.selectAllResource();
-        //...调用数据库界面以获取资源列表
+        //调用数据库界面以获取资源列表
 
         //将半成品集合对应为实例集合
         List<SemiProduct> semis_todo = new ArrayList<>();
 
         //收集每个订单的半成品列表
-        for(int i=0;i<orders.size();i++){
-            semis_todo.addAll(splitOrder.split(orders.get(i)));
+        for (Order order : orders) {
+            semis_todo.addAll(splitOrder.split(order));
         }
 
         while(semis_todo.size() != 0){
@@ -50,7 +50,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                 //得到当前半成品首要工序
                 Process proc = semis_todo.get(i).getProcesses().get(semis_todo.get(i).getSeq());
                 //加入首要工序列表
-                processes.put(proc,processes.getOrDefault(proc, -1)+1);
+                processes.put(proc,processes.getOrDefault(proc, 0)+1);
                 //判断是否为最后一道工序
                 if(!semis_todo.get(i).isBottom()){
                     //调整列表指针seq到下一位
@@ -64,31 +64,30 @@ public class ScheduleServiceImpl implements ScheduleService {
             //排入工序到资源中
             for(Process proc:processes.keySet()){
                 //res为当前工序所需资源列表
-                List<NeedResource> res = proc.getNeedResources();
+                List<NeedResource> resNeed = proc.getNeedResources();
                 //循环遍历所需资源
-                for(int j=0;j<res.size();j++){
+                for (NeedResource needResource : resNeed) {
                     //设置变量寻找最短队列
                     int oldest_time = 9999;
                     int insert_id = -1;
                     //遍历工厂资源列表
-                    for(int i=0;i<resources.size();i++){
+                    for (int i = 0; i < resources.size(); i++) {
                         //匹配对应资源且时间最短
-                        if( resources.get(i).getType() == res.get(j).getResource_type() &&
-                                resources.get(i).getWorkspace() == res.get(j).getWorkspace() &&
-                                resources.get(i).getEnd_time() < oldest_time)
-                        {
+                        if (resources.get(i).getType().equals(needResource.getResource_type()) &&
+                                resources.get(i).getWorkspace().equals(proc.getWorkspace()) &&
+                                resources.get(i).getEnd_time() < oldest_time) {
                             //匹配成功后更新变量
                             oldest_time = resources.get(i).getEnd_time();
                             insert_id = i;
                         }
                     }
-                    if(insert_id != -1){
+                    if (insert_id != -1) {
                         //将当前工序加入工厂资源队列
                         List<Process> temp = resources.get(insert_id).getProcesses();
                         temp.add(proc);
                         resources.get(insert_id).setProcesses(temp);
-                    }
-                    else{
+                        resources.get(insert_id).setEnd_time(resources.get(insert_id).getEnd_time() + proc.getExec_time());
+                    } else {
                         System.out.println("Can't insert!");
                         return null;
                     }
@@ -105,4 +104,5 @@ public class ScheduleServiceImpl implements ScheduleService {
         }
         return resources;
     }
+
 }

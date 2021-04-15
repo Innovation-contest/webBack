@@ -16,6 +16,10 @@ public interface ResourceMapper {
      * @param resources
      * @return
      */
-    int updateResource(List<Resource> resources);
+    Boolean updateResource(List<Resource> resources);
+
+
+
+    Boolean insertResource(Resource resource);
 
 }

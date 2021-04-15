@@ -2,6 +2,11 @@ package com.fuchuang.controller;
 
 import com.fuchuang.mapper.OrderMapper;
 import com.fuchuang.pojo.Order;
+import com.fuchuang.pojo.Resource;
+import com.fuchuang.service.OrderService;
+import com.fuchuang.service.ResourceService;
+import com.fuchuang.service.impl.OrderServiceImpl;
+import com.fuchuang.service.impl.ResourceServiceImpl;
 import org.apache.ibatis.annotations.ResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,12 +21,15 @@ import java.util.List;
 public class AdminController {
 
     @Autowired
-    private OrderMapper orderMapper;
+    private OrderServiceImpl orderService;
+
+    @Autowired
+    private ResourceServiceImpl resourceService;
 
     @ResponseBody
     @RequestMapping("/getorderlist")
     public List<Order> getAll(){
-        List<Order> orders=orderMapper.selectAllOrder();
+        List<Order> orders=orderService.selectAllOrder();
         return  orders;
     }
 
@@ -29,8 +37,15 @@ public class AdminController {
     @ResponseBody
     @RequestMapping("/addorder")
     public Boolean addOrder(@RequestParam Order order){
-        Boolean status=orderMapper.insertOneOrder(order);
+        Boolean status=orderService.insertOneOrder(order);
         return status;
     }
+
+    @ResponseBody
+    @RequestMapping("/")
+    public List<Resource> scheduleResult(){
+        return resourceService.selectAllResource();
+    }
+
 
 }

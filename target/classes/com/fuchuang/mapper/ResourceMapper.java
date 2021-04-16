@@ -1,6 +1,7 @@
 package com.fuchuang.mapper;
 
 import com.fuchuang.pojo.Resource;
+import com.fuchuang.pojo.ResourceType;
 
 import java.util.List;
 
@@ -21,4 +22,7 @@ public interface ResourceMapper {
 
     Boolean insertResource(Resource resource);
 
+    Boolean deleteResource(int resource_id);
+
+    ResourceType selectResourceType(String workspace, String resource_type);
 }

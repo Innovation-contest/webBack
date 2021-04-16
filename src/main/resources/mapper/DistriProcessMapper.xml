@@ -28,4 +28,10 @@
     <delete id="deleteBYResourceId" parameterType="int">
         delete from distri_process where resource_id=#{resource_id}
     </delete>
+
+
+    <delete id="deleteAll">
+        delete from distri_process;
+    </delete>
+
 </mapper>

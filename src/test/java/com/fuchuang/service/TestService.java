@@ -3,6 +3,7 @@ package com.fuchuang.service;
 
 import com.fuchuang.mapper.OrderMapper;
 import com.fuchuang.pojo.Order;
+import com.fuchuang.pojo.ResourceType;
 import com.fuchuang.pojo.SemiProduct;
 import com.fuchuang.service.impl.SplitOrderImpl;
 import org.junit.Test;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -20,7 +22,10 @@ public class TestService {
     private OrderMapper orderMapper;
 
     @Autowired
-    private SplitOrderImpl splitOrder;
+    private SplitOrder splitOrder;
+
+    @Autowired
+    private ResourceService resourceService;
 
     @Test
     public void test_service(){
@@ -30,5 +35,15 @@ public class TestService {
             System.out.println(semiProduct.toString());
         }
         System.out.println(semiProducts.size());
+    }
+
+
+    @Test
+    public void test_type(){
+        List<ResourceType> resourceTypes =new ArrayList<>();
+        resourceTypes=resourceService.selectResourceByType();
+        for(ResourceType resourceType:resourceTypes){
+            System.out.println(resourceType.toString());
+        }
     }
 }

@@ -66,6 +66,9 @@ public class ScheduleServiceImpl implements ScheduleService {
                 //res为当前工序所需资源列表
                 List<NeedResource> resNeed = proc.getNeedResources();
                 //循环遍历所需资源
+                List<Integer> InsertIdList = new ArrayList<>();
+                int last_time = 0;
+
                 for (NeedResource needResource : resNeed) {
                     //设置变量寻找最短队列
                     int oldest_time = 9999;
@@ -81,16 +84,30 @@ public class ScheduleServiceImpl implements ScheduleService {
                             insert_id = i;
                         }
                     }
-                    if (insert_id != -1) {
-                        //将当前工序加入工厂资源队列
-                        List<Process> temp = resources.get(insert_id).getProcesses();
-                        temp.add(proc);
-                        resources.get(insert_id).setProcesses(temp);
-                        resources.get(insert_id).setEnd_time(resources.get(insert_id).getEnd_time() + proc.getExec_time());
+                    //找到所需资源中最晚结束的
+                    if(last_time < oldest_time){
+                        last_time = oldest_time;
+                    }
+
+                    if(insert_id != -1){
+                        InsertIdList.add(insert_id);
                     } else {
                         System.out.println("Can't insert!");
                         return null;
                     }
+                }
+                for(int insert_id: InsertIdList) {
+                    //更新工序中的resourceId
+                    proc.setResource_id(resources.get(insert_id).getId());
+                    //更新工序中的相对时间
+                    proc.setStart_time(last_time);
+                    proc.setEnd_time(last_time + proc.getExec_time());
+                    //将当前工序加入工厂资源队列
+                    List<Process> temp = resources.get(insert_id).getProcesses();
+                    temp.add(proc);
+                    resources.get(insert_id).setProcesses(temp);
+                    //设置资源上工序的结束时间
+                    resources.get(insert_id).setEnd_time(resources.get(insert_id).getEnd_time() + proc.getExec_time());
                 }
                 //在工序列表中删除排完序的工序
                 if(processes.get(proc) > proc.getMax_num()){

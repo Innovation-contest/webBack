@@ -13,23 +13,31 @@
     </resultMap>
 <!-- 未测试-->
     <insert id="insertResource" parameterType="com.fuchuang.pojo.Resource">
-        insert into resource (resource_id, workspace, resource_type, to_free_time)
-<!--        <foreach item="com.fuchuang.pojo.Resource" collection="list" separator=",">-->
-            values (#{id},#{workspace},#{type},#{end_time})
-<!--        </foreach>-->
+        insert into resource (workspace, resource_type, to_free_time)
+            values (#{workspace},#{type},#{end_time})
     </insert>
 
     <update id="updateResource" parameterType="java.util.ArrayList">
-        update resource
-        <foreach item="com.fuchuang.pojo.Resource" collection="list" separator=",">
+        <foreach item="Resource" collection="list" separator=";">
+            update resource
             <set>
-                to_free_time = #{end_time}
+                to_free_time = #{Resource.end_time}
             </set>
-                where resource_id=#{id}
+                where resource_id = #{Resource.id}
         </foreach>
     </update>
 
     <select id="selectAllResource" resultMap="resourceResultMap">
         select * from resource
     </select>
+
+    <delete id="deleteResource" parameterType="int">
+        delete from resource where resource_id=#{resource_id}
+    </delete>
+
+    <select id="selectResourceType" resultType="com.fuchuang.pojo.ResourceType">
+        select count(*) as amount, workspace as "workspace",resource_type as "resource_type"
+        from resource where workspace=#{arg0} and resource_type=#{arg1}
+    </select>
+
 </mapper>

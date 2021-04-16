@@ -24,4 +24,8 @@
             (#{Process.id},#{Process.resource_id},#{Process.semi_id},#{Process.parallel},#{Process.max_num},#{Process.exec_time},#{Process.workspace},#{Process.start_time},#{Process.end_time})
         </foreach>
     </insert>
+
+    <delete id="deleteBYResourceId" parameterType="int">
+        delete from distri_process where resource_id=#{resource_id}
+    </delete>
 </mapper>

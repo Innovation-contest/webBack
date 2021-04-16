@@ -25,4 +25,7 @@ public interface ResourceMapper {
     Boolean deleteResource(int resource_id);
 
     ResourceType selectResourceType(String workspace, String resource_type);
+
+
+    Boolean updateToZero();
 }

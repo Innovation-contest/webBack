@@ -14,19 +14,21 @@
 <!-- 未测试-->
     <insert id="insertResource" parameterType="com.fuchuang.pojo.Resource">
         insert into resource (workspace, resource_type, to_free_time)
-<!--        <foreach item="com.fuchuang.pojo.Resource" collection="list" separator=",">-->
             values (#{workspace},#{type},#{end_time})
-<!--        </foreach>-->
     </insert>
 
     <update id="updateResource" parameterType="java.util.ArrayList">
-        update resource
-        <foreach item="com.fuchuang.pojo.Resource" collection="list" separator=",">
+        <foreach item="Resource" collection="list" separator=";">
+            update resource
             <set>
-                to_free_time = #{end_time}
+                to_free_time = #{Resource.end_time}
             </set>
-                where resource_id=#{id}
+                where resource_id = #{Resource.id}
         </foreach>
+    </update>
+
+    <update id="updateToZero">
+        update resource set to_free_time=0;
     </update>
 
     <select id="selectAllResource" resultMap="resourceResultMap">
@@ -39,7 +41,7 @@
 
     <select id="selectResourceType" resultType="com.fuchuang.pojo.ResourceType">
         select count(*) as amount, workspace as "workspace",resource_type as "resource_type"
-        from resource where workspace=#{0} and resource_type=#{1}
+        from resource where workspace=#{arg0} and resource_type=#{arg1}
     </select>
 
 </mapper>

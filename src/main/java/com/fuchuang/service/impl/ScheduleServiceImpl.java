@@ -1,5 +1,6 @@
 package com.fuchuang.service.impl;
 
+import com.fuchuang.mapper.DistriProcessMapper;
 import com.fuchuang.mapper.ProductMapper;
 import com.fuchuang.mapper.ResourceMapper;
 import com.fuchuang.pojo.*;
@@ -24,6 +25,10 @@ public class ScheduleServiceImpl implements ScheduleService {
 
     @Autowired
     private SplitOrderImpl splitOrder;
+
+
+    @Autowired
+    private DistriProcessMapper distriProcessMapper;
     /**
      *
      * @param orders 拆分好的订单列表
@@ -31,6 +36,9 @@ public class ScheduleServiceImpl implements ScheduleService {
      */
     @Override
     public List<Resource> schedule(List<Order> orders) {
+        resourceMapper.updateToZero();
+        distriProcessMapper.deleteAll();
+
         List<Resource> resources = resourceMapper.selectAllResource();
         //调用数据库界面以获取资源列表
 
@@ -98,7 +106,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                 }
                 for(int insert_id: InsertIdList) {
                     //更新工序中的resourceId
-                    proc.setRource_id(resources.get(insert_id).getId());
+                    proc.setResource_id(resources.get(insert_id).getId());
                     //更新工序中的相对时间
                     proc.setStart_time(last_time);
                     proc.setEnd_time(last_time + proc.getExec_time());
@@ -118,6 +126,10 @@ public class ScheduleServiceImpl implements ScheduleService {
                     processes.remove(proc);
                 }
             }
+        }
+        resourceMapper.updateResource(resources);
+        for(Resource resource:resources){
+            distriProcessMapper.insertDProcesses(resource.getProcesses());
         }
         return resources;
     }

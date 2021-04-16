@@ -18,4 +18,7 @@ public interface DistriProcessMapper {
      * @return 是否插入成功
      */
     Boolean insertDProcesses(List<Process> processes);
+
+
+    Boolean deleteBYResourceId(int resource_id);
 }

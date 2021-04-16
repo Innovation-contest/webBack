@@ -133,4 +133,26 @@ public class OrderMapperTest {
             System.out.println(resource.toString());
         }
     }
+
+
+    @Test
+    public void t(){
+        distriProcessMapper.deleteBYResourceId(1);
+        resourceMapper.deleteResource(1);
+    }
+
+
+    @Test
+    public void t1(){
+        List<Resource> resources = new ArrayList<>();
+        Resource resource1 =new Resource();
+        Resource resource2= new Resource();
+        resource1.setId(2);
+        resource1.setEnd_time(10);
+        resource2.setId(3);
+        resource2.setEnd_time(15);
+        resources.add(resource1);
+        resources.add(resource2);
+        resourceMapper.updateResource(resources);
+    }
 }

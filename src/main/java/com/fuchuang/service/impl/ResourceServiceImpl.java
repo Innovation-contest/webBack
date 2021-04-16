@@ -58,7 +58,10 @@ public class ResourceServiceImpl implements ResourceService {
         types.add("高级设备");
         for(String w:workspaces){
             for (String t:types){
-                resourceTypes.add(resourceMapper.selectResourceType(w,t));
+                ResourceType resourceType=resourceMapper.selectResourceType(w,t);
+                if(resourceType.getAmount()!=0){
+                    resourceTypes.add(resourceType);
+                }
             }
         }
         return  resourceTypes;

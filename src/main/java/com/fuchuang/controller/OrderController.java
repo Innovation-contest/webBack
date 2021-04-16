@@ -42,7 +42,8 @@ public class OrderController {
     @ResponseBody
     @RequestMapping(value = "/updateorder")
     public Boolean updateorder(@RequestParam Order order){
-        return orderServiceImpl.updateOrder(order);
+        Boolean status=orderServiceImpl.updateOrder(order);
+        return status;
     }
 
 
@@ -51,13 +52,6 @@ public class OrderController {
     public Boolean delete_order(@RequestParam int order_id){
         Boolean status=orderServiceImpl.deleteOrderById(order_id);
         return status;
-    }
-
-
-    @ResponseBody
-    @RequestMapping("/")
-    public List<Resource> scheduleResult(){
-        return resourceServiceImpl.selectAllResource();
     }
 
 

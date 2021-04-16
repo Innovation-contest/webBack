@@ -169,115 +169,115 @@ insert into product_fixed values (4);
 insert into product_fixed values (5);
 insert into product_fixed values (6);
 
-insert into semi_product values (2),(3),(4),(5),(6);
-
-insert into product_semi values (1,2),
-                                (1,3),
-                                (1,4),
-                                (2,1),
-                                (2,5),
-                                (3,2),
-                                (3,6),
-                                (4,2),
-                                (4,4),
-                                (5,3),
-                                (5,6),
-                                (6,1),
-                                (6,2);
-
-insert into product_fixed values (1);
-
-insert into product_fixed (product_id) values (1);
-insert into  semi_product (semi_id) values (2);
-insert into product_semi (product_id, semi_id) values (1,2);
-insert into resource (resource_id, workspace, resource_type, to_free_time) values
-    (1,'produce','机床',30);
-insert into need_resouce (resource_type, resouce_num, process_id) values
-    ('人员',2,1);
-insert into processes (process_id, semi_id, is_para, max_para, oper_time, pro_workspace) values
-    (1,1,true,10,20,'assemble');
-
-
-
-
-insert into processes values (1,1,true,10,5,'Processing'),
-                             (2,1,false,1,10,'Processing'),
-                             (3,1,false,1,2,'Processing'),
-                             (4,1,true,15,20,'assembly'),
-                             (5,2,false,1,12,'Processing'),
-                             (6,2,false,1,10,'Processing'),
-                             (7,2,false,1,20,'Processing'),
-                             (8,2,true,15,20,'assembly'),
-                             (9,3,false,1,5,'Processing'),
-                             (10,3,false,1,10,'Processing'),
-                             (11,3,false,1,2,'Processing'),
-                             (12,3,true,15,20,'assembly'),
-                             (13,4,false,1,5,'Processing'),
-                             (14,4,true,12,10,'assembly'),
-                             (15,5,false,1,2,'Processing'),
-                             (16,5,true,15,20,'assembly'),
-                             (17,6,false,1,2,'Processing'),
-                             (18,6,true,15,20,'assembly');
-
-insert into need_resouce values ('机床',1,1,1),
-                                ('人员',2,2,1),
-                                ('高级设备',2,3,1),
-                                ('机床',1,4,2),
-                                ('人员',2,5,2),
-                                ('高级设备',2,6,2),
-                                ('机床',1,7,3),
-                                ('人员',2,8,3),
-                                ('高级设备',2,9,3),
-                                ('机床',1,10,4),
-                                ('人员',2,11,4),
-                                ('高级设备',2,54,4),
-                                ('机床',1,12,5),
-                                ('人员',2,13,5),
-                                ('高级设备',2,14,5),
-                                ('机床',1,15,6),
-                                ('人员',2,16,6),
-                                ('高级设备',2,17,6),
-                                ('机床',1,18,7),
-                                ('人员',2,19,7),
-                                ('高级设备',2,20,7),
-                                ('机床',1,21,8),
-                                ('人员',2,22,8),
-                                ('高级设备',2,23,8),
-                                ('机床',1,24,9),
-                                ('人员',2,25,9),
-                                ('高级设备',2,26,9),
-                                ('机床',1,27,10),
-                                ('人员',2,28,10),
-                                ('高级设备',2,29,10),
-                                ('机床',1,30,11),
-                                ('人员',2,31,11),
-                                ('高级设备',2,32,11),
-                                ('机床',1,33,12),
-                                ('人员',2,34,12),
-                                ('高级设备',2,35,12),
-                                ('机床',1,36,13),
-                                ('人员',2,37,13),
-                                ('高级设备',2,38,13),
-                                ('机床',1,39,14),
-                                ('人员',2,40,14),
-                                ('高级设备',2,41,14),
-                                ('机床',1,42,15),
-                                ('人员',2,43,15),
-                                ('高级设备',2,44,15),
-                                ('机床',1,45,16),
-                                ('人员',2,46,16),
-                                ('高级设备',2,47,16),
-                                ('机床',1,48,17),
-                                ('人员',2,49,17),
-                                ('高级设备',2,50,17),
-                                ('机床',1,51,18),
-                                ('人员',2,52,18),
-                                ('高级设备',2,53,18);
-
-insert into real_product values (5,1,18,1);
-insert into real_product values (6,1,6,2);
-insert into real_product values (4,2,10,3);
-insert into real_product values (2,2,15,4);
-insert into real_product values (5,2,18,5);
-insert into real_product values (3,3,15,6);
-insert into real_product values (1,3,10,7);
+# insert into semi_product values (2),(3),(4),(5),(6);
+#
+# insert into product_semi values (1,2),
+#                                 (1,3),
+#                                 (1,4),
+#                                 (2,1),
+#                                 (2,5),
+#                                 (3,2),
+#                                 (3,6),
+#                                 (4,2),
+#                                 (4,4),
+#                                 (5,3),
+#                                 (5,6),
+#                                 (6,1),
+#                                 (6,2);
+#
+# insert into product_fixed values (1);
+#
+# insert into product_fixed (product_id) values (1);
+# insert into  semi_product (semi_id) values (2);
+# insert into product_semi (product_id, semi_id) values (1,2);
+# insert into resource (resource_id, workspace, resource_type, to_free_time) values
+#     (1,'produce','机床',30);
+# insert into need_resouce (resource_type, resouce_num, process_id) values
+#     ('人员',2,1);
+# insert into processes (process_id, semi_id, is_para, max_para, oper_time, pro_workspace) values
+#     (1,1,true,10,20,'assemble');
+#
+#
+#
+#
+# insert into processes values (1,1,true,10,5,'Processing'),
+#                              (2,1,false,1,10,'Processing'),
+#                              (3,1,false,1,2,'Processing'),
+#                              (4,1,true,15,20,'assembly'),
+#                              (5,2,false,1,12,'Processing'),
+#                              (6,2,false,1,10,'Processing'),
+#                              (7,2,false,1,20,'Processing'),
+#                              (8,2,true,15,20,'assembly'),
+#                              (9,3,false,1,5,'Processing'),
+#                              (10,3,false,1,10,'Processing'),
+#                              (11,3,false,1,2,'Processing'),
+#                              (12,3,true,15,20,'assembly'),
+#                              (13,4,false,1,5,'Processing'),
+#                              (14,4,true,12,10,'assembly'),
+#                              (15,5,false,1,2,'Processing'),
+#                              (16,5,true,15,20,'assembly'),
+#                              (17,6,false,1,2,'Processing'),
+#                              (18,6,true,15,20,'assembly');
+#
+# insert into need_resouce values ('机床',1,1,1),
+#                                 ('人员',2,2,1),
+#                                 ('高级设备',2,3,1),
+#                                 ('机床',1,4,2),
+#                                 ('人员',2,5,2),
+#                                 ('高级设备',2,6,2),
+#                                 ('机床',1,7,3),
+#                                 ('人员',2,8,3),
+#                                 ('高级设备',2,9,3),
+#                                 ('机床',1,10,4),
+#                                 ('人员',2,11,4),
+#                                 ('高级设备',2,54,4),
+#                                 ('机床',1,12,5),
+#                                 ('人员',2,13,5),
+#                                 ('高级设备',2,14,5),
+#                                 ('机床',1,15,6),
+#                                 ('人员',2,16,6),
+#                                 ('高级设备',2,17,6),
+#                                 ('机床',1,18,7),
+#                                 ('人员',2,19,7),
+#                                 ('高级设备',2,20,7),
+#                                 ('机床',1,21,8),
+#                                 ('人员',2,22,8),
+#                                 ('高级设备',2,23,8),
+#                                 ('机床',1,24,9),
+#                                 ('人员',2,25,9),
+#                                 ('高级设备',2,26,9),
+#                                 ('机床',1,27,10),
+#                                 ('人员',2,28,10),
+#                                 ('高级设备',2,29,10),
+#                                 ('机床',1,30,11),
+#                                 ('人员',2,31,11),
+#                                 ('高级设备',2,32,11),
+#                                 ('机床',1,33,12),
+#                                 ('人员',2,34,12),
+#                                 ('高级设备',2,35,12),
+#                                 ('机床',1,36,13),
+#                                 ('人员',2,37,13),
+#                                 ('高级设备',2,38,13),
+#                                 ('机床',1,39,14),
+#                                 ('人员',2,40,14),
+#                                 ('高级设备',2,41,14),
+#                                 ('机床',1,42,15),
+#                                 ('人员',2,43,15),
+#                                 ('高级设备',2,44,15),
+#                                 ('机床',1,45,16),
+#                                 ('人员',2,46,16),
+#                                 ('高级设备',2,47,16),
+#                                 ('机床',1,48,17),
+#                                 ('人员',2,49,17),
+#                                 ('高级设备',2,50,17),
+#                                 ('机床',1,51,18),
+#                                 ('人员',2,52,18),
+#                                 ('高级设备',2,53,18);
+#
+# insert into real_product values (5,1,18,1);
+# insert into real_product values (6,1,6,2);
+# insert into real_product values (4,2,10,3);
+# insert into real_product values (2,2,15,4);
+# insert into real_product values (5,2,18,5);
+# insert into real_product values (3,3,15,6);
+# insert into real_product values (1,3,10,7);

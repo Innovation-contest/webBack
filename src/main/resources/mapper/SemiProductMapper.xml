@@ -9,8 +9,6 @@
     </resultMap>
 
     <select id="selectSemiByProductId" parameterType="int" resultMap="semiResultMap">
-        select
-        semi_id
-        from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=#{product_id})
+        select semi_id from semi_product where semi_id in (select semi_id from product_semi where product_semi.product_id=#{product_id}) order by semi_id
     </select>
 </mapper>

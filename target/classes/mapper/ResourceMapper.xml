@@ -27,8 +27,21 @@
         </foreach>
     </update>
 
+    <update id="updateToZero">
+        update resource set to_free_time=0;
+    </update>
+
     <select id="selectAllResource" resultMap="resourceResultMap">
         select * from resource
+    </select>
+
+    <select id="selectResource" resultType="com.fuchuang.pojo.Resource">
+        select
+        resource_id as id,
+        workspace as workspace,
+        resource_type as type ,
+        to_free_time as end_time
+        from resource
     </select>
 
     <delete id="deleteResource" parameterType="int">

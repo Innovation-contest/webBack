@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class Process {
+public class Process implements Cloneable{
     private int id;
     private Boolean parallel;
     private String workspace;
@@ -17,4 +17,8 @@ public class Process {
     private int resource_id;
     private int start_time;
     private int end_time;
+
+    public Process clone() throws CloneNotSupportedException{
+        return (Process)super.clone();
+    }
 }

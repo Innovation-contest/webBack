@@ -28,7 +28,6 @@ public class SplitOrderImpl implements SplitOrder {
     @Override
     public List<SemiProduct> split(Order order){
         List<RealProduct> realproducts = order.getProducts();
-        Map<SemiProduct,Integer> SemiProductMap= new HashMap<>();
         List<SemiProduct> semis = new ArrayList<>();
         for(RealProduct realProduct:realproducts){
             Product product=productMapper.selectProductById(realProduct.getProduct_id());

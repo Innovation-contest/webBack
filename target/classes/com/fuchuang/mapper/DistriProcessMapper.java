@@ -21,4 +21,7 @@ public interface DistriProcessMapper {
 
 
     Boolean deleteBYResourceId(int resource_id);
+
+
+    Boolean deleteAll();
 }

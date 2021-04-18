@@ -1,10 +1,12 @@
 package com.fuchuang.service.impl;
 
 import com.fuchuang.mapper.DistriProcessMapper;
+import com.fuchuang.mapper.OrderMapper;
 import com.fuchuang.mapper.ResourceMapper;
 import com.fuchuang.pojo.Resource;
 import com.fuchuang.pojo.ResourceType;
 import com.fuchuang.service.ResourceService;
+import com.fuchuang.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,7 +22,13 @@ public class ResourceServiceImpl implements ResourceService {
     private ResourceMapper resourceMapper;
 
     @Autowired
+    private OrderMapper orderMapper;
+
+    @Autowired
     private DistriProcessMapper distriProcessMapper;
+
+    @Autowired
+    private ScheduleService scheduleService;
 
     @Override
     public List<Resource> selectAllResource() {
@@ -29,7 +37,9 @@ public class ResourceServiceImpl implements ResourceService {
 
     @Override
     public Boolean insertResource(Resource resource) {
-        return resourceMapper.insertResource(resource);
+        resourceMapper.insertResource(resource);
+        scheduleService.schedule(orderMapper.selectAllOrder());
+        return true;
     }
 
     @Override
@@ -37,6 +47,7 @@ public class ResourceServiceImpl implements ResourceService {
         try{
             distriProcessMapper.deleteBYResourceId(resource_id);
             resourceMapper.deleteResource(resource_id);
+            scheduleService.schedule(orderMapper.selectAllOrder());
         }catch (Exception e){
             return false;
         }

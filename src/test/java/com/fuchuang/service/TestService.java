@@ -3,6 +3,7 @@ package com.fuchuang.service;
 
 import com.fuchuang.mapper.OrderMapper;
 import com.fuchuang.pojo.Order;
+import com.fuchuang.pojo.Resource;
 import com.fuchuang.pojo.ResourceType;
 import com.fuchuang.pojo.SemiProduct;
 import com.fuchuang.service.impl.SplitOrderImpl;
@@ -27,6 +28,9 @@ public class TestService {
     @Autowired
     private ResourceService resourceService;
 
+    @Autowired
+    private ScheduleService scheduleService;
+
     @Test
     public void test_service(){
         Order order = orderMapper.selectOrderById(1);
@@ -44,6 +48,27 @@ public class TestService {
         resourceTypes=resourceService.selectResourceByType();
         for(ResourceType resourceType:resourceTypes){
             System.out.println(resourceType.toString());
+        }
+    }
+
+
+    @Test
+    public void test_sch(){
+        Order order = orderMapper.selectOrderById(1);
+        List<Order> orders = new ArrayList<>();
+        orders.add(order);
+        List<Resource> resources=scheduleService.schedule(orders);
+        for(Resource resource:resources){
+            System.out.println(resource.toString());
+        }
+    }
+
+    @Test
+    public void te(){
+        label:
+        for(int i=1;i<10;i++){
+            System.out.println(i);
+            continue label;
         }
     }
 }

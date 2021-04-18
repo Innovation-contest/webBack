@@ -5,6 +5,7 @@ import com.fuchuang.mapper.RealProductMapper;
 import com.fuchuang.pojo.Order;
 import com.fuchuang.pojo.RealProduct;
 import com.fuchuang.service.OrderService;
+import com.fuchuang.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,6 +21,9 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private RealProductMapper realProductMapper;
 
+    @Autowired
+    private ScheduleService scheduleService;
+
     public List<Order> selectAllOrder() {
         return orderMapper.selectAllOrder();
     }
@@ -29,7 +33,11 @@ public class OrderServiceImpl implements OrderService {
     public Boolean insertOneOrder(Order order) {
         try {
             orderMapper.insertOneOrder(order);
+            for(RealProduct realProduct:order.getProducts()){
+                realProduct.setOrder_id(order.getOrder_id());
+            }
             realProductMapper.insertProducts(order.getProducts());
+            scheduleService.schedule(orderMapper.selectAllOrder());
         }catch (Exception e){
             return false;
         }
@@ -42,6 +50,7 @@ public class OrderServiceImpl implements OrderService {
         try {
             realProductMapper.deleteProductByOrderId(order_id);
             orderMapper.deleteOneOrderById(order_id);
+            scheduleService.schedule(orderMapper.selectAllOrder());
         }catch (Exception e){
             return false;
         }
@@ -55,6 +64,7 @@ public class OrderServiceImpl implements OrderService {
             orderMapper.updataOrderById(order);
             realProductMapper.deleteProductByOrderId(order.getOrder_id());
             realProductMapper.insertProducts(order.getProducts());
+            scheduleService.schedule(orderMapper.selectAllOrder());
         }catch (Exception e){
             return false;
         }

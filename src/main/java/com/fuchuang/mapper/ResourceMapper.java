@@ -28,4 +28,10 @@ public interface ResourceMapper {
 
 
     Boolean updateToZero();
+
+    /**
+     * 查询所有资源信息用作排产
+     * @return 资源信息list
+     */
+    List<Resource> selectResource();
 }

@@ -15,7 +15,7 @@
 
     <select id="selectAllOrder"  resultMap="orderResult">
         select *
-        from orderinfo
+        from orderinfo order by order_end_time
     </select>
 
     <select id="selectOrderById" resultMap="orderResult">

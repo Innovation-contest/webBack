@@ -35,6 +35,15 @@
         select * from resource
     </select>
 
+    <select id="selectResource" resultType="com.fuchuang.pojo.Resource">
+        select
+        resource_id as id,
+        workspace as workspace,
+        resource_type as type ,
+        to_free_time as end_time
+        from resource
+    </select>
+
     <delete id="deleteResource" parameterType="int">
         delete from resource where resource_id=#{resource_id}
     </delete>

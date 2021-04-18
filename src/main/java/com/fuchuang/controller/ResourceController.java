@@ -9,6 +9,8 @@ import com.fuchuang.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -25,17 +27,20 @@ public class ResourceController {
     @Autowired
     private OrderService orderService;
 
+    @ResponseBody
     @RequestMapping("/getcalender")
     public List<Resource> selectAllResource(){
         return resourceService.selectAllResource();
     }
 
+    @ResponseBody
     @RequestMapping("/getlist")
     public List<ResourceType> findResourceBytype(){
         return resourceService.selectResourceByType();
     }
 
-    @RequestMapping("/addres")
+    @ResponseBody
+    @RequestMapping(value = "/addres",method = RequestMethod.POST)
     public Boolean addResource(Resource resource){
         Boolean status=resourceService.insertResource(resource);
         scheduleService.schedule(orderService.selectAllOrder());
@@ -43,7 +48,8 @@ public class ResourceController {
     }
 
 
-    @RequestMapping("/deleteres")
+    @ResponseBody
+    @RequestMapping(value = "/deleteres",method = RequestMethod.POST)
     public Boolean deleteResource(int resource_id){
         Boolean status=resourceService.deleteResouerceById(resource_id);
         scheduleService.schedule(orderService.selectAllOrder());

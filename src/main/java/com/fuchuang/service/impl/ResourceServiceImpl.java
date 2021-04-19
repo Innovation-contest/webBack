@@ -7,6 +7,7 @@ import com.fuchuang.pojo.Resource;
 import com.fuchuang.pojo.ResourceType;
 import com.fuchuang.service.ResourceService;
 import com.fuchuang.service.ScheduleService;
+import com.fuchuang.util.ResourceUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,8 +32,8 @@ public class ResourceServiceImpl implements ResourceService {
     private ScheduleService scheduleService;
 
     @Override
-    public List<Resource> selectAllResource() {
-        return resourceMapper.selectAllResource();
+    public List<ResourceUtil> selectAllResource() {
+        return resourceMapper.selectWebResource();
     }
 
     @Override

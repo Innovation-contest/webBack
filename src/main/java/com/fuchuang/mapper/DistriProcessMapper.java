@@ -1,6 +1,7 @@
 package com.fuchuang.mapper;
 
 import com.fuchuang.pojo.Process;
+import com.fuchuang.util.ProcessUtil;
 
 import java.util.List;
 
@@ -18,6 +19,9 @@ public interface DistriProcessMapper {
      * @return 是否插入成功
      */
     Boolean insertDProcesses(List<Process> processes);
+
+
+    List<ProcessUtil> findProcessByResourceId(int resource_id);
 
 
     Boolean deleteBYResourceId(int resource_id);

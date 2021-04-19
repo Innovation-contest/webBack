@@ -6,7 +6,7 @@ import java.util.List;
 @Data
 public class Resource {
     private int resource_id;
-    private String type;
+    private String resource_type;
     private String workspace;
     private int end_time;
     private List<Process> processes;

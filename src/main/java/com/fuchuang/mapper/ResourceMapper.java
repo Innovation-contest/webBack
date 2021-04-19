@@ -2,6 +2,7 @@ package com.fuchuang.mapper;
 
 import com.fuchuang.pojo.Resource;
 import com.fuchuang.pojo.ResourceType;
+import com.fuchuang.util.ResourceUtil;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ public interface ResourceMapper {
      */
     List<Resource> selectAllResource();
 
+
     /**
      * 批量更新resource的结束时间
      * @param resources resource列表
@@ -20,12 +22,13 @@ public interface ResourceMapper {
     Boolean updateResource(List<Resource> resources);
 
 
+    List<ResourceUtil> selectWebResource();
+
     Boolean insertResource(Resource resource);
 
     Boolean deleteResource(int resource_id);
 
     ResourceType selectResourceType(String workspace, String resource_type);
-
 
     Boolean updateToZero();
 

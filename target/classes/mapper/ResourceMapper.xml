@@ -3,18 +3,25 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fuchuang.mapper.ResourceMapper">
-<!--    未测试-->
+
     <resultMap id="resourceResultMap" type="com.fuchuang.pojo.Resource">
         <id property="resource_id" column="resource_id"/>
         <result property="workspace" column="workspace"/>
-        <result property="type" column="resource_type"/>
+        <result property="resource_type" column="resource_type"/>
         <result property="end_time" column="to_free_time"/>
         <collection property="processes" column="resource_id" javaType="java.util.List" select="com.fuchuang.mapper.DistriProcessMapper.selectDProcessByResourceId"/>
     </resultMap>
-<!-- 未测试-->
+
+    <resultMap id="webResourceMap" type="com.fuchuang.util.ResourceUtil">
+        <id property="resource_id" column="resource_id"/>
+        <result property="workspace" column="workspace"/>
+        <result property="resource_type" column="resource_type"/>
+        <collection property="processes" column="resource_id" javaType="java.util.List" select="com.fuchuang.mapper.DistriProcessMapper.findProcessByResourceId"/>
+    </resultMap>
+
     <insert id="insertResource" parameterType="com.fuchuang.pojo.Resource">
         insert into resource (workspace, resource_type, to_free_time)
-            values (#{workspace},#{type},#{end_time})
+            values (#{workspace},#{resource_type},#{end_time})
     </insert>
 
     <update id="updateResource" parameterType="java.util.ArrayList">
@@ -35,11 +42,15 @@
         select * from resource
     </select>
 
+    <select id="selectWebResource" resultMap="webResourceMap">
+        select * from resource
+    </select>
+
     <select id="selectResource" resultType="com.fuchuang.pojo.Resource">
         select
         resource_id as resource_id,
         workspace as workspace,
-        resource_type as type ,
+        resource_type as resource_type ,
         to_free_time as end_time
         from resource
     </select>

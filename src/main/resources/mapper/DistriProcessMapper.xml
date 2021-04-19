@@ -18,6 +18,14 @@
         from distri_process where resource_id=#{resource_id} order by end_time
     </select>
 
+    <select id="findProcessByResourceId" parameterType="int" resultType="com.fuchuang.util.ProcessUtil">
+        select
+            process_id as "process_id",
+            pro_start_time as "start_time",
+            pro_end_time as "end_time"
+            from distri_process where resource_id=#{resource_id} order by end_time
+    </select>
+
     <insert id="insertDProcesses" parameterType="java.util.ArrayList" useGeneratedKeys="true">
         insert into distri_process (process_id, resource_id, semi_id, is_para, max_para, oper_time, pro_workspace, pro_start_time, pro_end_time) values
         <foreach item="Process" collection="list" separator=",">
@@ -30,8 +38,8 @@
     </delete>
 
 
-    <delete id="deleteAll">
-        delete from distri_process;
-    </delete>
+    <update id="deleteAll">
+        truncate table distri_process;
+    </update>
 
 </mapper>

@@ -98,7 +98,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                         //遍历工厂资源列表
                         for (int i = 0; i < resources.size(); i++) {
                             //匹配对应资源且时间最短
-                            if (resources.get(i).getType().equals(needResource.getResource_type()) &&
+                            if (resources.get(i).getResource_type().equals(needResource.getResource_type()) &&
                                     resources.get(i).getWorkspace().equals(proc.getWorkspace()) &&
                                     resources.get(i).getEnd_time() < oldest_time) {
                                 //匹配成功后更新变量
@@ -175,7 +175,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                     //遍历工厂资源列表
                     for (int i = 0; i < resources.size(); i++) {
                         //匹配对应资源且时间最短
-                        if (resources.get(i).getType().equals(needResource.getResource_type()) &&
+                        if (resources.get(i).getResource_type().equals(needResource.getResource_type()) &&
                                 resources.get(i).getWorkspace().equals(proc.getWorkspace()) &&
                                 resources.get(i).getEnd_time() < oldest_time) {
                             //匹配成功后更新变量

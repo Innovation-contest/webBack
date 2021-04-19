@@ -6,6 +6,7 @@ import com.fuchuang.pojo.ResourceType;
 import com.fuchuang.service.OrderService;
 import com.fuchuang.service.ResourceService;
 import com.fuchuang.service.ScheduleService;
+import com.fuchuang.util.ResourceUtil;
 import com.fuchuang.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,7 +35,7 @@ public class ResourceController {
 
     @ResponseBody
     @RequestMapping("/getcalender")
-    public List<Resource> selectAllResource(){
+    public List<ResourceUtil> selectAllResource(){
         return resourceService.selectAllResource();
     }
 
@@ -46,7 +47,7 @@ public class ResourceController {
 
     @ResponseBody
     @RequestMapping(value = "/addres",method = RequestMethod.POST)
-    public Result addResource(Resource resource){
+    public Result addResource(@RequestBody Resource resource){
         Boolean status=resourceService.insertResource(resource);
         scheduleService.schedule(orderService.selectAllOrder());
         if(status){

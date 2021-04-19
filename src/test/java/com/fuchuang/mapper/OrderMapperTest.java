@@ -2,6 +2,7 @@ package com.fuchuang.mapper;
 
 import com.fuchuang.pojo.*;
 import com.fuchuang.pojo.Process;
+import com.fuchuang.util.ResourceUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -154,5 +155,14 @@ public class OrderMapperTest {
         resources.add(resource1);
         resources.add(resource2);
         resourceMapper.updateResource(resources);
+    }
+
+
+    @Test
+    public  void tcsd(){
+        List<ResourceUtil> resourceUtils=resourceMapper.selectWebResource();
+        for(ResourceUtil resourceUtil:resourceUtils){
+            System.out.println(resourceUtil.toString());
+        }
     }
 }

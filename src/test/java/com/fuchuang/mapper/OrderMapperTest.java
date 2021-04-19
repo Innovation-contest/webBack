@@ -81,15 +81,15 @@ public class OrderMapperTest {
 //    @Transactional(propagation = Propagation.REQUIRED)
     public void add_order(){
         Order order=new Order();
-        order.setOrder_description("12th服创大赛");
-        order.setOrder_id(8);
-        order.setStart_time(0);
-        order.setEnd_time(100);
+        order.setOrder_descri("12th服创大赛");
+
+        order.setOrder_start_time(0);
+        order.setOrder_end_time(100);
         List<RealProduct> realProducts= new ArrayList<>();
         RealProduct realProduct1 =new RealProduct();
         realProduct1.setProduct_id(1);
         realProduct1.setOrder_id(8);
-        realProduct1.setProduct_num(5);
+        realProduct1.setProduct_amount(5);
         realProducts.add(realProduct1);
 
         orderMapper.insertOneOrder(order);
@@ -147,9 +147,9 @@ public class OrderMapperTest {
         List<Resource> resources = new ArrayList<>();
         Resource resource1 =new Resource();
         Resource resource2= new Resource();
-        resource1.setId(2);
+        resource1.setResource_id(2);
         resource1.setEnd_time(10);
-        resource2.setId(3);
+        resource2.setResource_id(3);
         resource2.setEnd_time(15);
         resources.add(resource1);
         resources.add(resource2);

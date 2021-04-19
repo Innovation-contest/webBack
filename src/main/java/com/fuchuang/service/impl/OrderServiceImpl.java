@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
 public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderMapper orderMapper;
@@ -30,22 +29,21 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
-    public Boolean insertOneOrder(Order order) {
-        try {
+    @Transactional
+    public boolean insertOneOrder(Order order) {
+            int id=orderMapper.selectMaxId();
+            order.setOrder_id(id+1);
             orderMapper.insertOneOrder(order);
             for(RealProduct realProduct:order.getProducts()){
                 realProduct.setOrder_id(order.getOrder_id());
             }
             realProductMapper.insertProducts(order.getProducts());
             scheduleService.schedule(orderMapper.selectAllOrder());
-        }catch (Exception e){
-            return false;
-        }
-
-        return true;
+            return true;
     }
 
     @Override
+    @Transactional
     public Boolean deleteOrderById(int order_id) {
         try {
             realProductMapper.deleteProductByOrderId(order_id);
@@ -54,15 +52,18 @@ public class OrderServiceImpl implements OrderService {
         }catch (Exception e){
             return false;
         }
-
         return true;
     }
 
     @Override
+    @Transactional
     public Boolean updateOrder(Order order) {
         try {
             orderMapper.updataOrderById(order);
             realProductMapper.deleteProductByOrderId(order.getOrder_id());
+            for(RealProduct realProduct:order.getProducts()){
+                realProduct.setOrder_id(order.getOrder_id());
+            }
             realProductMapper.insertProducts(order.getProducts());
             scheduleService.schedule(orderMapper.selectAllOrder());
         }catch (Exception e){

@@ -33,7 +33,7 @@ public class SplitOrderImpl implements SplitOrder {
             Product product=productMapper.selectProductById(realProduct.getProduct_id());
             List<SemiProduct> semiProducts=product.getSemiProducts();
             for(SemiProduct semi:semiProducts){
-                for(int i=0;i<realProduct.getProduct_num();i++){
+                for(int i=0;i<realProduct.getProduct_amount();i++){
                     try{
                         semis.add(semi.clone());
                     }catch (CloneNotSupportedException e){

@@ -4,6 +4,8 @@ import com.fuchuang.pojo.Order;
 import com.fuchuang.pojo.Resource;
 import com.fuchuang.service.OrderService;
 import com.fuchuang.service.ResourceService;
+import com.fuchuang.util.Result;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +25,10 @@ public class OrderController {
     @Autowired
     private ResourceService resourceServiceImpl;
 
+    Result result =new Result();
+
     @ResponseBody
-    @RequestMapping(value = "/getorderlist",method = RequestMethod.POST)
+    @RequestMapping(value = "/getorderlist")
     public List<Order> getAll(){
         List<Order> orders=orderServiceImpl.selectAllOrder();
         return  orders;
@@ -33,33 +37,40 @@ public class OrderController {
 
     @ResponseBody
     @RequestMapping(value = "/addorder",method = RequestMethod.POST)
-    public Boolean addOrder(@RequestBody(required=true) Order order){
-        Order order1=new Order();
-//        order1.setOrder_id(order.getIntHeader("order_id"));
-//        order1.setEnd_time(order.getIntHeader("order_start_time"));
-//        order1.setStart_time(order.getIntHeader("order_end_time"));
-//        order1.setOrder_description(order.getParameter("order_description"));
-//        System.out.println(order.getParameter("products"));
-//        Boolean status=orderServiceImpl.insertOneOrder(order1);
-//        return status;
-        System.out.println(order.toString());
-        return true;
+    public Result addOrder(@RequestBody(required=true) Order order){
+        Boolean status=orderServiceImpl.insertOneOrder(order);
+        if(status){
+            result.setStatus(1);
+        }else {
+            result.setStatus(0);
+        }
+        return result;
     }
 
 
     @ResponseBody
     @RequestMapping(value = "/updateorder",method = RequestMethod.POST)
-    public Boolean updateorder(@RequestParam Order order){
+    public Result updateorder(@RequestBody Order order){
         Boolean status=orderServiceImpl.updateOrder(order);
-        return status;
+        if(status){
+            result.setStatus(1);
+        }else{
+            result.setStatus(0);
+        }
+        return result;
     }
 
 
     @ResponseBody
     @RequestMapping(value = "/delorder",method = RequestMethod.POST)
-    public Boolean delete_order(@RequestParam int order_id){
-        Boolean status=orderServiceImpl.deleteOrderById(order_id);
-        return status;
+    public Result delete_order(@RequestBody Map<String,Integer> order){
+        Boolean status=orderServiceImpl.deleteOrderById(order.get("order_id"));
+        if(status){
+            result.setStatus(1);
+        }else{
+            result.setStatus(0);
+        }
+        return result;
     }
 
 

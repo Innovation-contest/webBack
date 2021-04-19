@@ -7,14 +7,14 @@
         select
          order_id as "order_id",
          product_id as "product_id",
-         product_num as "product_num"
+         product_num as "product_amount"
         from real_product where order_id=#{order_id}
     </select>
 
     <insert id="insertProducts" parameterType="java.util.ArrayList" useGeneratedKeys="true" keyProperty="id">
         insert into real_product (product_id, order_id, product_num) values
             <foreach item="RealProduct" collection="list" separator=",">
-                    (#{RealProduct.product_id},#{RealProduct.order_id},#{RealProduct.product_num})
+                    (#{RealProduct.product_id},#{RealProduct.order_id},#{RealProduct.product_amount})
             </foreach>
     </insert>
 

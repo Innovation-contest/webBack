@@ -5,9 +5,9 @@
 <mapper namespace="com.fuchuang.mapper.OrderMapper">
     <resultMap id="orderResult" type="Order">
         <id property="order_id" column="order_id"/>
-        <result property="end_time" column="order_end_time"/>
-        <result property="start_time" column="order_start_time"/>
-        <result property="order_description" column="order_descri"/>
+        <result property="order_end_time" column="order_end_time"/>
+        <result property="order_start_time" column="order_start_time"/>
+        <result property="order_descri" column="order_descri"/>
         <result property="real_start_time" column="real_start_time"/>
         <result property="real_end_time" column="real_end_time"/>
         <collection property="products" column="order_id" javaType="java.util.List" select="com.fuchuang.mapper.RealProductMapper.findProductById"/>
@@ -23,16 +23,30 @@
         from orderinfo where order_id=#{order_id}
     </select>
 
+    <select id="selectMaxId" resultType="int">
+        select max(order_id) from orderinfo
+    </select>
+
     <insert id="insertOneOrder" parameterType="com.fuchuang.pojo.Order">
-        insert into orderinfo (order_id, order_end_time, order_descri, order_start_time) values (#{order_id},#{end_time},#{order_description},#{start_time})
+        insert into orderinfo (order_id ,order_end_time, order_descri, order_start_time) values
+                            (#{order_id},#{order_end_time},#{order_descri},#{order_start_time})
     </insert>
 
     <update id="updataOrderById" parameterType="com.fuchuang.pojo.Order">
-        update orderinfo set order_end_time=#{end_time}, real_start_time=#{real_start_time},real_end_time=#{real_end_time} where order_id=#{order_id}
+        update orderinfo set order_end_time=#{order_end_time}, real_start_time=#{real_start_time},real_end_time=#{real_end_time} where order_id=#{order_id}
     </update>
 
+    <update id="updataOrders" parameterType="java.util.List">
+        <foreach collection="list" item="order" separator=";">
+            update orderinfo
+            <set>
+                real_start_time=#{order.real_start_time},
+                real_end_time=#{order.real_end_time}
+            </set>
+            where order_id=#{order.order_id}
+        </foreach>
+    </update>
 
-    
     <delete id="deleteOneOrderById" parameterType="int">
         delete from orderinfo where order_id=#{order_id}
     </delete>

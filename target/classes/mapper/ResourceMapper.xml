@@ -5,7 +5,7 @@
 <mapper namespace="com.fuchuang.mapper.ResourceMapper">
 <!--    未测试-->
     <resultMap id="resourceResultMap" type="com.fuchuang.pojo.Resource">
-        <id property="id" column="resource_id"/>
+        <id property="resource_id" column="resource_id"/>
         <result property="workspace" column="workspace"/>
         <result property="type" column="resource_type"/>
         <result property="end_time" column="to_free_time"/>
@@ -23,7 +23,7 @@
             <set>
                 to_free_time = #{Resource.end_time}
             </set>
-                where resource_id = #{Resource.id}
+                where resource_id = #{Resource.resource_id}
         </foreach>
     </update>
 
@@ -37,7 +37,7 @@
 
     <select id="selectResource" resultType="com.fuchuang.pojo.Resource">
         select
-        resource_id as id,
+        resource_id as resource_id,
         workspace as workspace,
         resource_type as type ,
         to_free_time as end_time

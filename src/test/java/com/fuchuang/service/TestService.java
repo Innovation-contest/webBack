@@ -29,6 +29,9 @@ public class TestService {
     private ResourceService resourceService;
 
     @Autowired
+    private  OrderService orderService;
+
+    @Autowired
     private ScheduleService scheduleService;
 
     @Test
@@ -54,13 +57,7 @@ public class TestService {
 
     @Test
     public void test_sch(){
-        Order order = orderMapper.selectOrderById(1);
-        List<Order> orders = new ArrayList<>();
-        orders.add(order);
-        List<Resource> resources=scheduleService.schedule(orders);
-        for(Resource resource:resources){
-            System.out.println(resource.toString());
-        }
+         orderService.deleteOrderById(4);
     }
 
     @Test

@@ -1,6 +1,7 @@
 package com.fuchuang.service.impl;
 
 import com.fuchuang.mapper.DistriProcessMapper;
+import com.fuchuang.mapper.OrderMapper;
 import com.fuchuang.mapper.ProductMapper;
 import com.fuchuang.mapper.ResourceMapper;
 import com.fuchuang.pojo.*;
@@ -21,7 +22,7 @@ import java.util.Map;
 public class ScheduleServiceImpl implements ScheduleService {
 
     @Autowired
-    private ProductMapper productMapper;
+    private OrderMapper orderMapper;
 
     @Autowired
     private ResourceMapper resourceMapper;
@@ -49,6 +50,9 @@ public class ScheduleServiceImpl implements ScheduleService {
 
         //收集每个订单的半成品列表
         for (Order order : orders) {
+            //设置订单开始时间
+            order.setReal_start_time(getResourceLastTime(resources,false));
+
             semis_todo = splitOrder.split(order);
             List<Process>assembly = new ArrayList<>();
 
@@ -94,7 +98,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                         //遍历工厂资源列表
                         for (int i = 0; i < resources.size(); i++) {
                             //匹配对应资源且时间最短
-                            if (resources.get(i).getType().equals(needResource.getResource_type()) &&
+                            if (resources.get(i).getResource_type().equals(needResource.getResource_type()) &&
                                     resources.get(i).getWorkspace().equals(proc.getWorkspace()) &&
                                     resources.get(i).getEnd_time() < oldest_time) {
                                 //匹配成功后更新变量
@@ -122,7 +126,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                             e.printStackTrace();
                         }
                         //填入对应resourceid
-                        ptmp.setResource_id(resources.get(insert_id).getId());
+                        ptmp.setResource_id(resources.get(insert_id).getResource_id());
                         //更新工序中的相对时间
                         last_time = last_time >= resources.get(insert_id).getEnd_time()?last_time:resources.get(insert_id).getEnd_time();
                         ptmp.setStart_time(last_time);
@@ -153,6 +157,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                     }
                 }
             }
+
             List<Process>processes = assembly;
             //排入装配工序到资源中
             for(int j=0;j<processes.size();j++){
@@ -170,7 +175,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                     //遍历工厂资源列表
                     for (int i = 0; i < resources.size(); i++) {
                         //匹配对应资源且时间最短
-                        if (resources.get(i).getType().equals(needResource.getResource_type()) &&
+                        if (resources.get(i).getResource_type().equals(needResource.getResource_type()) &&
                                 resources.get(i).getWorkspace().equals(proc.getWorkspace()) &&
                                 resources.get(i).getEnd_time() < oldest_time) {
                             //匹配成功后更新变量
@@ -179,11 +184,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                         }
                     }
                     //找到前置资源中最晚结束的
-                    for (int i = 0; i < resources.size(); i++) {
-                        if(resources.get(i).getEnd_time()>last_time){
-                            last_time = resources.get(i).getEnd_time();
-                        }
-                    }
+                    last_time = getResourceLastTime(resources,false);
 
                     if(insert_id != -1){
                         InsertIdList.add(insert_id);
@@ -200,7 +201,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                         e.printStackTrace();
                     }
                     //填入对应resourceid
-                    ptmp.setResource_id(resources.get(insert_id).getId());
+                    ptmp.setResource_id(resources.get(insert_id).getResource_id());
                     //更新工序中的相对时间
                     last_time = last_time >= resources.get(insert_id).getEnd_time()?last_time:resources.get(insert_id).getEnd_time();
                     ptmp.setStart_time(last_time);
@@ -210,7 +211,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                     temp.add(ptmp);
                     resources.get(insert_id).setProcesses(temp);
                     //设置资源上工序的结束时间
-                    resources.get(insert_id).setEnd_time(resources.get(insert_id).getEnd_time() + proc.getExec_time());
+                    resources.get(insert_id).setEnd_time(last_time + proc.getExec_time());
                 }
                 //设置并行数
                 int para_num = proc.getMax_num();
@@ -230,6 +231,8 @@ public class ScheduleServiceImpl implements ScheduleService {
                     }
                 }
             }
+            //设置订单结束时间
+            order.setReal_end_time(getResourceLastTime(resources,true));
         }
 
         resourceMapper.updateResource(resources);
@@ -239,7 +242,16 @@ public class ScheduleServiceImpl implements ScheduleService {
                 distriProcessMapper.insertDProcesses(resource.getProcesses());
             }
         }
+        orderMapper.updataOrders(orders);
         return resources;
     }
-
+    private int getResourceLastTime(List<Resource> resources,boolean isAll){
+        int last_time = 0;
+        for (int i = 0; i < resources.size(); i++) {
+            if(resources.get(i).getEnd_time()>last_time && ((isAll&&resources.get(i).getWorkspace().equals("装配"))||(!isAll&&resources.get(i).getWorkspace().equals("加工")))){
+                last_time = resources.get(i).getEnd_time();
+            }
+        }
+        return last_time;
+    }
 }

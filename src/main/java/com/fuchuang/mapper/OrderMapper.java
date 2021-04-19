@@ -39,4 +39,8 @@ public interface OrderMapper {
      *
      */
     Boolean deleteOneOrderById(int order_id);
+
+    Boolean updataOrders(List<Order> orders);
+
+    int selectMaxId();
 }

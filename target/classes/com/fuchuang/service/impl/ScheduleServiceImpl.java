@@ -128,6 +128,9 @@ public class ScheduleServiceImpl implements ScheduleService {
                         //填入对应resourceid
                         ptmp.setResource_id(resources.get(insert_id).getResource_id());
                         //更新工序中的相对时间
+                        if(ptmp.getId() == 36 && resources.get(insert_id).getResource_id() == 1){
+                            System.out.println("haha\n");
+                        }
                         last_time = last_time >= resources.get(insert_id).getEnd_time()?last_time:resources.get(insert_id).getEnd_time();
                         ptmp.setStart_time(last_time);
                         ptmp.setEnd_time(last_time + ptmp.getExec_time());
@@ -136,7 +139,8 @@ public class ScheduleServiceImpl implements ScheduleService {
                         temp.add(ptmp);
                         resources.get(insert_id).setProcesses(temp);
                         //设置资源上工序的结束时间
-                        resources.get(insert_id).setEnd_time(resources.get(insert_id).getEnd_time() + proc.getExec_time());
+                        resources.get(insert_id).setEnd_time(ptmp.getEnd_time());
+
                     }
                     //设置并行数
                     int para_num = proc.getMax_num();
@@ -211,7 +215,7 @@ public class ScheduleServiceImpl implements ScheduleService {
                     temp.add(ptmp);
                     resources.get(insert_id).setProcesses(temp);
                     //设置资源上工序的结束时间
-                    resources.get(insert_id).setEnd_time(last_time + proc.getExec_time());
+                    resources.get(insert_id).setEnd_time(ptmp.getEnd_time());
                 }
                 //设置并行数
                 int para_num = proc.getMax_num();
@@ -245,6 +249,8 @@ public class ScheduleServiceImpl implements ScheduleService {
         orderMapper.updataOrders(orders);
         return resources;
     }
+
+
     private int getResourceLastTime(List<Resource> resources,boolean isAll){
         int last_time = 0;
         for (int i = 0; i < resources.size(); i++) {

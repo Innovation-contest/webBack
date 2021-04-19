@@ -68,4 +68,11 @@ public class TestService {
             continue label;
         }
     }
+
+
+    @Test
+    public void testdas(){
+        List<Order> orders =orderMapper.selectAllOrder();
+        scheduleService.schedule(orders);
+    }
 }

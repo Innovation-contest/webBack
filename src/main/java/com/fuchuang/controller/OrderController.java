@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RequestMapping("/orders")
+@CrossOrigin
 @Controller
 public class OrderController {
 
